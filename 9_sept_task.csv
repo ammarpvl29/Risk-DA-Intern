@@ -1,0 +1,9 @@
+﻿DATE;NO;DESC;Tag
+09Sep2025;1;EXPLORE FLOW CUSTOMER LFS (metadata screening;
+;2;Berapa total customer [customer_id] on boarding di bulan august 25, posisi akhir bulan? Untuk nasabah [customer_source] LFS Only;
+;3;Berapa total customer on boarding di bulan august 25, posisi tanggal 15 August 2025? Untuk nasabah LFS Only;
+;4;Ambil salah satu customer LFS yang onboarding date 10 Augustus, lihat journey setiap posisi bussdatenya;
+;5;Berapa total customer on boarding di bulan august 25, posisi akhir bulan? Untuk semua nasabah bank jago;
+;6;Berapa total customer on boarding di bulan august 25, posisi akhir bulan per core banking [customer_source]? Untuk semua nasabah bank jago;
+;7;Berapa total customer unique [id_number] on boarding di bulan august 25, posisi akhir bulan? Untuk semua nasabah bank jago;
+;8;Try to link between with customer and balance, using customer_id {filter customer pada poin 4};

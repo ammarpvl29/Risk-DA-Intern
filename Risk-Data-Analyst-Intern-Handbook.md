@@ -301,6 +301,111 @@ ORDER BY origination_quarter, months_on_book;
 1. **Channeling Model**: Partner with fintech/multifinance
 2. **Direct Digital**: End-to-end app-based lending
 
+### Jago Banking Architecture & Customer Flow
+
+#### **Three Core Banking Flows**
+```
+Funding (Deposito) ←→ Bank Jago ←→ Borrower (Credit)
+```
+
+#### **Customer Onboarding Flow - Funding (LFS)**
+
+**LFS = Life Financial System/Funding (Core Banking System)**
+
+**Step 1: Customer Registration**
+```
+Mobile App (Jago) → CBS → DWH → Datamart (datamart.customer, datamart.risk)
+```
+
+**Step 2: Verification Process**
+1. **Dukcapil Check**: KTP registration verification via government API
+2. **Liveness Detection**: Face verification technology
+3. **Biometrics**: Fingerprint/face recognition
+4. **Video KYC**: Know Your Customer video verification
+5. **DTOT Check**: Screening for terrorists/political persons (Indonesia specific)
+
+#### **Customer Identity & CIF Management**
+
+**Key Concept**: One person, multiple CIFs across core banking systems
+
+**Example**: Mr. Bambang with KTP ID: 31740188
+- **LFS CIF**: 010BZ (for funding/deposits)
+- **Lending CIF**: Different CIF (for loan products)
+- **Bridge**: KTP serves as unique identifier across systems
+
+**Counting Logic:**
+- **Unique LFS customers**: Use CIF count
+- **Total unique Bank customers**: Use KTP (id_number) count  
+- **All product instances**: Use CIF without deduplication
+
+#### **Product Creation After Onboarding**
+
+**Funding Products:**
+1. **CASA (Current Account Saving Account)**
+   - **Tabungan**: Savings account (flexible withdrawals)
+   - Table: `loan_account`
+
+2. **Deposito**: Time deposits (fixed term, higher interest)
+   - Table: `dwh_core.account_daily_deposit` (snapshot data)
+
+#### **Data Architecture & Tables**
+
+**Production Tables (BigQuery):**
+```sql
+-- Customer snapshot (specific business_date)
+SELECT * FROM data-prd-adhoc.credit_risk_adhoc.intern_data_mart_customer
+WHERE business_date = '2025-08-31'
+
+-- Balance snapshot (specific business_date)  
+SELECT * FROM data-prd-adhoc.credit_risk_adhoc.intern_dwh_core_daily_closing_balance
+WHERE business_date = '2025-08-31'
+
+-- Transaction data (date range)
+SELECT * FROM data-prd-adhoc.credit_risk_adhoc.intern_customer_individual_successful_transactions_analytics
+WHERE transaction_date BETWEEN '2025-08-01' AND '2025-08-31'
+```
+
+#### **Data Types & Characteristics**
+
+**Snapshot Data (Position Data):**
+- **Characteristic**: Point-in-time capturing of current state
+- **Behavior**: Values change over time, can increase or decrease
+- **Risk**: Data can be "lost" if customer closes product
+- **Example Timeline**:
+  ```
+  9/9/2025  | CIF: 010BZ | Tabungan | Balance: Rp 0
+  10/9/2025 | CIF: 010BZ | Tabungan | Balance: Rp 50,000
+  11/9/2025 | CIF: 010BZ | Tabungan | Balance: Rp 75,000
+  ```
+- **Product Closure**: If customer closes account, next snapshot shows 0, but historical data preserved in master tables
+
+**Transaction Data (Event Data):**
+- **Characteristic**: Event-driven recording, not real-time (1-hour delay)
+- **Behavior**: Records daily mutations (in/out transactions)
+- **Persistence**: Never deleted, complete audit trail
+- **Example**: Onboarding transaction captured once and never changes
+
+**Master Data vs Snapshot Data:**
+- **Master**: Maintains product information even after closure (with active/inactive flag)
+- **Snapshot**: Only shows current active positions
+- **Key Difference**: Master has PK/FK relationships in CBS, but DWH has no formal PK/FK constraints
+
+#### **Customer Acquisition Channels**
+
+**Organic vs Non-Organic (Partner-driven):**
+- Column: `partner_name` in customer table
+- **Organic**: Direct Jago app registration
+- **Non-Organic**: Through partner banks/platforms
+
+#### **Medallion Architecture**
+```
+CBS (Core Banking System)
+    ↓
+DWH Bronze (dwh.core) 
+    ↓
+DWH Silver/Gold (Datamart: datamart.risk, datamart.customer, datamart.credit_risk)
+```
+
 ### Risk DA Role at Bank Jago
 
 #### **Digital Risk Analytics**
@@ -323,9 +428,11 @@ API Gateway + Authentication
     ↓
 Decision Engine + Credit Scoring
     ↓
-Core Banking System
+Core Banking System (CBS)
     ↓
-Data Lake + Analytics Platform
+Data Warehouse (DWH) - Bronze, Silver, Gold
+    ↓
+Data Lake + Analytics Platform (BigQuery)
     ↓
 Risk Dashboards + Reporting
 ```

@@ -1,0 +1,10 @@
+;;Pedoman;;;
+DATE;NO;DESC;Tag;Answer;Comment after Study
+10Sep2025;;EXPLORE FLOW CASA (posisi august 2025=31 August 25);;;
+;1;Per posisi august 2025, ada berapa product funding - per product category, product funding di bank jago? per core banking (tipe core banking di tabel ini customer_source). bikin matrix aja, row (product categiry, product name /account type) column (core banking) intern_dwh_core_daily_closing_balance;;;
+;2;Per posisi august 2025,  Khusus product funding LFS, ada berapa type currency bank jago? intern_dwh_core_daily_closing_balance;;;
+;3;"Per posisi august 2025,  Ambil sample 2 customer LFS yang on boarding di tanggal 10 August 2025,  yang di product funding LFS nya punya lebih dari 3 atau 5 product LFS. intern_dwh_core_daily_closing_balance + tabel customer";;;
+;4;dari sample no.3 check di tabel data-prd-adhoc.credit_risk_adhoc.intern_data_mart_td_daily per posisi August 2025, apa perbedaan kedua tabel tersebut?;;;
+;;EXPLORE FLOW TRANSACTION (posisi august 2025=31 August 25);;;
+;5;dari kedua sample no.3 check di tabel transaksi, transaksi per tgl 1 august - 31 august, sort customer_id, transaction_date --> analisa alur dan transaksi apa saja yang dilakukan nasabah?;;;
+;6;cek dari kedua sample no.3, di data-prd-adhoc.credit_risk_adhoc.intern_data_mart_td_daily posisi 10 August 2025 dan data-prd-adhoc.credit_risk_adhoc.intern_data_mart_td_daily posisi 31 August 2025, apakah ada hubungannya dengan transaksi pada poin no.5;;;

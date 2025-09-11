@@ -1,0 +1,22 @@
+﻿field name;mode;type;description
+source_table;;STRING;
+full_date;;DATE;The date at which the data is recorded
+account_number;;STRING;Customer account number
+customer_source;;STRING;Data source of account
+transaction_source;;STRING;Data source of the transaction
+account_code;;STRING;Customer saving account code (eg: MA)
+account_type;;STRING;Customer saving account type(eg: MAIN ACCOUNT)
+account_status;;STRING;Account status
+account_category;;STRING;Categroy account (Saving, Current or Deposito)
+customer_id;;STRING;Customer identification number from the source database<br/><br/> Wincore/Olibs724/LFS transformation
+cif;;STRING;Customer identification number, for LFS source in from cif column
+branch_id;;STRING;ID of branch where customer open the account
+last_transaction_id;;STRING;id of the latest transaction_id of the customer of the balance
+total_balance;;NUMERIC;last total balance each day each source account number. Total Balance = hold_amount + account_balance
+closing_balance_timestamp;;TIMESTAMP;UTC time when balance calculated
+interest_accrued;;NUMERIC;Amount interest accrued
+daily_closing_balance_deleted;;BOOLEAN;Flag indicating if the event is the deletion of the entity
+daily_closing_balance_event_at;;TIMESTAMP;Event timestamp of the original source
+daily_closing_balance_inserted_at;;TIMESTAMP;The system timestamp when the row was inserted
+daily_closing_balance_inserted_by;;STRING;The identifier of the process, system or person who inserted the row to the table
+currency_code;;STRING;Currency code of the balance for that account.

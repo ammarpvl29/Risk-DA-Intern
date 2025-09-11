@@ -1,0 +1,86 @@
+field name;mode;type;description
+transaction_id;;STRING;Transaction ID
+customer_id;;STRING;Customer ID (Jago customer ID: CREDIT = recipient, DEBIT = sender)
+transaction_unenriched_id;;STRING;
+transaction_source;;STRING;Transaction source
+transaction_date;;DATE;Transaction date
+transaction_datetime;;DATETIME;Transaction Datetime (Jakarta Time)
+transaction_status;;STRING;
+source_account_number;;STRING;Source Account Number
+source_account_type;;STRING;Source Account Type
+source_account_bank;;STRING;Source Account Bank
+source_customer_id;;STRING;
+beneficiary_customer_id;;STRING;
+beneficiary_account_number;;STRING;Beneficiary Account Number
+beneficiary_account_type;;STRING;Beneficiary Account Type
+beneficiary_account_bank;;STRING;Beneficiary Account Bank
+transaction_code;;STRING;Transaction Code
+transaction_category;;STRING;Transaction Category
+category_code;;STRING;Category code
+transaction_amount;;NUMERIC;Transaction amount represented in IDR
+transaction_amount_currency;;STRING;Transaction amount currency represented in IDR
+non_idr_transaction_amount;;NUMERIC;Represents the actual non IDR transaction amount in case of a FCY Transaction.
+non_idr_transaction_amount_currency;;STRING;Represents the actual non IDR transactional currency in case of a FCY Transaction.
+exchange_rate;;NUMERIC;Represents the actual exchange rate applied at the time of Forex transaction.
+total_balance;;NUMERIC;Total balance after transaction
+debit_credit_flag;;STRING;Debit credit flag (Debit for sending, Credit for receiving)
+card_id;;STRING;Card ID (equal to card_id in the card table)
+card_type;;STRING;Card type
+card_product_name;;STRING;Card product name
+card_type_description;;STRING;
+additional_information_1;;STRING;
+additional_information_2;;STRING;
+additional_information_3;;STRING;
+additional_information_4;;STRING;
+payment_instruction_id;;STRING;Payment Instruction ID (equal to transaction_unenriched_id)
+transaction_code_description;;STRING;
+note;;STRING;Transaction Note
+payment_service_code;;STRING;Payment Service Code
+payment_service_type;;STRING;Payment Service Type
+approval_status;;STRING;
+created_by;;STRING;
+payment_instruction_amount;;NUMERIC;
+payment_instruction_status;;STRING;
+payment_instruction_type;;STRING;
+payment_instruction_created_at;;TIMESTAMP;
+payment_instruction_updated_at;;TIMESTAMP;
+category_change_status;;STRING;
+creator_device_id;;STRING;
+executor_device_id;;STRING;
+epic;;STRING;
+recurring;;STRING;
+last_execution_status;;STRING;
+last_execution_amount;;NUMERIC;
+last_execution_reason;;STRING;
+last_execution_fail_count;;INTEGER;
+last_execution_transaction_status;;STRING;
+mcc_code;;STRING;Merchant MCC Code
+merchant_criteria;;STRING;Merchant criteria
+merchant_postal_code;;STRING;Merchant Postal Code
+merchant_pan;;STRING;Merchant Pan
+national_mid;;STRING;Unique National Identification Number for every QRIS Code
+transaction_location;;STRING;
+manually_adjusted;;BOOLEAN;
+external_id;;STRING;
+execution_type;;STRING;
+network_information;;STRING;
+interchange;;STRING;
+transaction_group;;STRING;Transaction group
+merchant;;STRING;Merchant information derived from additional information 1
+merchant_id_from_payment_instruction;;STRING;The merchant_id sourced from the dwh_core.payment_instruction_current table. Use case for marketing: To provide cashbacks when a customer purchases a product at a partnering merchant, the partner provides us a list of merchant_ids that we can use to find the relevant transactions.
+merchant_name_from_payment_instruction;;STRING;
+failure_reason_detail;;INTEGER;
+failure_reason_actor;;INTEGER;
+failure_reason_type;;INTEGER;
+is_transaction_related_to_gamble;;BOOLEAN;
+is_bifast_transaction;;BOOLEAN;BIFast information
+record_inserted_at;;TIMESTAMP;Record inserted timestamp
+unique_id;;STRING;transaction_date , transaction_id
+plan_ahead_type;;STRING;Indicates the type of planned ahead transaction.
+plan_ahead_amount_type;;STRING;Indicates the planned ahead amount type.
+plan_ahead_approval_type;;STRING;Indicates the planned ahead approval type.
+plan_ahead_recurring_type;;STRING;Indicates the planned ahead recurring type.
+investment_platform;;STRING;Indicates the partner through which investment related transaction was made.
+loan_product;;STRING;
+request_money_flag;;BOOLEAN;TRUE if the transaction is happened through the Request Money Feature else FALSE.
+acquiring_institution_country_name;;STRING;

@@ -1,0 +1,47 @@
+field name;mode;type;description
+business_date;;DATE;Business Date
+source_system;;STRING;Source system where the record originated from
+account_status;;STRING;account status
+branch;;STRING;Branch
+branch_description;;STRING;Dranch Description
+customer_id;;STRING;Customer ID/CIF
+account_number;;STRING;Account Numner
+interest_rate;;BIGNUMERIC;Interest Rate
+profit_sharing_rate;;BIGNUMERIC;Profit Sharing Rate that will be only filled in for sharia product (business_stream = 'SHARIA')
+is_psia;;BOOLEAN;PSIA (Profit Sharing Investment Account) To determine if the account is sharing any revenue / interest to the customer
+golongan_pihak_lawan;;STRING;Golongan Pihak Lawan
+kategori_portfolio;;STRING;Kategori Portfolio
+kategori_debitur;;STRING;Kategori Debitur
+pihak_terkait;;STRING;Pihak Terkait
+product_type;;STRING;Product Type
+product_subtype;;STRING;Product Subtype
+balance;;BIGNUMERIC;Account Balance
+accrued_interest;;BIGNUMERIC;accrued_interest
+amount_in;;NUMERIC;SUM of incoming balance in the business_date
+amount_out;;NUMERIC;SUM of outgoing balance in the business_date
+customer_type_system;;STRING;Customer Type System
+customer_type_lcr;;STRING;Customer Type LCR
+average_balance_30_days;;BIGNUMERIC;Average balance from last 30 days from business date
+mtd_average_daily_balance;;BIGNUMERIC;
+average_daily_transactions;;FLOAT;
+mtd_average_daily_transactions;;FLOAT;Average transactions per day from start of the month to business_date
+number_of_transactions;;INTEGER;
+number_of_transactions_filtered;;INTEGER;
+mtd_number_of_transactions;;INTEGER;Number of transactions from the start of the month until the business_date
+number_of_transactions_30_days;;INTEGER;Total number of transactions filtered starting from 30 days before business_date
+automatic_rollover;;STRING;Automatic Rollover
+tenor;;BIGNUMERIC;Tenor
+business_stream;;STRING;The related business stream of the data, can be one of CONVENTIONAL OR SHARIA
+maturity_date;;DATE;Maturity Date
+start_date;;DATE;start Date
+closed_date;;TIMESTAMP;Closed Date
+is_early_redemption;;STRING;tagging if early redemption
+remaining_maturity_days;;INTEGER;Remaining Maturity Days
+is_locked_pocket;;STRING;is Locked Pocket
+locked_pocket_start_date;;TIMESTAMP;Locked Pocket Start Date
+locked_pocket_end_date;;DATE;Locked Pocket End Date
+locked_pocket_period;;INTEGER;Locked Pocket Period
+locked_pocket_remaining_days;;INTEGER;Locked Pocket Remaining Days
+currency;;STRING;Account currency
+foreign_balance;;BIGNUMERIC;Account balance in Foreign amount based on currency
+updated_at;;TIMESTAMP;Timestamp when record is updated
