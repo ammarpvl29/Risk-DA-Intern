@@ -1,0 +1,14 @@
+DATE;NO;DESC;Tag;Answer;Comment after Study
+11-Sep-25;;EXPLORE LOAN FOR DL;;;
+;1;"check/screening perbedaan tabel ""loan_offer_current"" dan ""loan_offer"" dari metadata dan sampel? *perhatikan, businessdate, offferdate, dan expirydate (loan_offer_current|loan_offer)";;;
+;2;as of august 25, dan pada loan_offer dan offer date = augst 25, customer lfs yang dioffer, berapa startdate termuda, dan startdate tertua, dan berapa total customer yang dioffer? (loan_offer|customer);;;
+;;berapa yang di offer date = july 25,  customer lfs yang dioffer, berapa startdate termuda, dan startdate tertua, dan berapa total customer yang dioffer? (loan_offer|customer);;;
+;3;masih di offer date august 25, cari berapa yang tertarik apply loan direct lending? (loan_offer[customer_id]|customer[id_number]|loan_application[id_number]) ;;;
+;;*loan_application : partner_id / product like 'JAD' (perhatikan dulu metadatanya;;;
+;;dari offer =august 25, berapa yang apply di bulan yang sama (create_event_at:august 25)?;;;
+;;dari offer =august 25, berapa yang apply di bulan setelah (create_event_at:august 25)?;;;
+;4;dari yang apply loan august 25 direct lending, berapa yang berhasil disburse (atau punya fasilitas loan di bank jago)? MasterLoanFacility, dealtypenya adalah 'JAG%';;;
+;;untuk mengkoneksikan dengan tabel loan offer, tabel masterLoanfacility harus di join dulu ke customer untuk di ambil id_numbernya;;;
+;; (loan_offer[customer_id]|customer[id_number]|loan_application[id_number] masterloanfacilility [idnumber]) ;;;
+;;pelajari  alur, screening isi data  apa saja isi konten master loan facility? sesuai dengan handbook loan (interes, limit, outstanding, tenor);;;
+;6;apa perbedaan master loan facility dan staging loan facility ? (StgLoanFacility);;;

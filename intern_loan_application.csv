@@ -1,0 +1,169 @@
+field name;mode;type;description
+source_application_id;;STRING;Loan application identifier that is being recorded in the source system.
+partner_contract_id;;STRING;
+loan_application_id;;STRING;Internal loan application unique identifier from each core banking system.
+loan_id;;STRING;Unique identifier of the loan, should be matched with data_mart.loan_facility.
+account_number;;STRING;account number / nomor_rekening
+loan_application_source;;STRING;Represents the source of the customer like LP/JFS/OLIBS724.
+partner_id;;STRING;Represent the name of the loan partner.
+borrower_type;;STRING;Borrower's type (e.g. CUSTOMER_TYPE_01)
+borrower_nationality;;STRING;Borrower's nationality
+borrower_full_name;;STRING;Borrower's full name
+borrower_gender_code;;STRING;Borrower's gender code (e.g.: L, P)
+borrower_id_code;;STRING;Borrower's id code (e.g. ID_TYPE_01)
+id_number;;STRING;Represent borrower's id number on Id card (KTP).
+borrower_npwp;;STRING;Represent borrower's tax id.
+borrower_email_address;;STRING;
+borrower_address_detail;;STRING;Borrower's address details
+borrower_country;;STRING;Borrower's address country code
+borrower_province;;STRING;Borrower's address province code
+borrower_city;;STRING;Borrower's address city code
+borrower_district;;STRING;Borrower's address district code
+borrower_sub_district;;STRING;Borrower's address subdistrict code
+borrower_rt;;STRING;Borrower's rt
+borrower_rw;;STRING;Borrower's rw
+borrower_postal_code;;STRING;Borrower's postal code
+estimated_yearly_gross_income;;FLOAT;Represent estimated yearly gross income of the borrower.
+source_of_income;;STRING;Borrower's source of income.
+lease_phone_number;;STRING;Represent borrower's lease phone number.
+mobile_phone_number;;STRING;Represent borrower's mobile phone.
+place_of_birth;;STRING;
+date_of_birth;;DATE;Represent borrower's date of birth.
+employer_name;;STRING;
+employer_industry_code;;STRING;
+employer_address;;STRING;
+employer_city;;STRING;
+marital_status;;STRING;Represent borrower's marital status.
+monthly_income;;FLOAT;Borrower's monthly income.
+borrower_citizen;;STRING;
+number_of_dependents;;INTEGER;Borrower's dependents number.
+bank;;STRING;
+debtor_group;;STRING;
+debtor_code;;STRING;The category of the debtor.
+partner_debtor_status;;STRING;
+last_education_code;;STRING;Borrower's last education code.
+profession_code;;STRING;Borrower's profession code.
+credit_type;;STRING;The type of the loan.
+credit_nature;;STRING;The characteristic of the loan.
+credit_category;;STRING;The category of the loan.
+economy_sector;;STRING;Represent the economic sector of the debtor.
+government_program;;STRING;Code indicating which Government's Lending Program this loan application is related to.
+history_dpd;;INTEGER;
+installment_start_date;;DATE;The date in Jakarta Time when the first repayment of a loan begins.
+measurement_category;;STRING;The measurement category.
+original_loan_amount;;FLOAT;The original (gross) loan amount requested for this loan application.
+portfolio_category;;STRING;The category of the loan portfolio.
+product_code;;STRING;Represent the product code.
+product_tenure;;INTEGER;
+product_tenure_type;;STRING;
+product_interest_rate_percentage;;FLOAT;
+purpose_of_loan;;STRING;Represent the loan usage type.
+purpose_of_opening;;STRING;
+risk_group;;STRING;Represent risk group of the borrower.
+existing_risk_group;;STRING;
+status;;STRING;The status of the loan application.
+loan_application_status_code;;INTEGER;
+usage_orientation;;STRING;Represent the usage orientation of the loan.
+cbas_id;;STRING;
+project_amount;;FLOAT;Represents The amount of the project/activity related to the loan application. For LP data, only productive loan will have a value, it is 0 for consumptive loan.
+project_location;;STRING;The location code of the project/activity related to the loan application, correlates to code field from dwh_core__address_dati_code.
+reject_reason;;STRING;The reason of rejection, in case when the loan application is not approved.
+goods_name;;STRING;Goods name.
+goods_value;;FLOAT;Goods value.
+goods_type;;STRING;Goods type.
+goods_ltv;;FLOAT;Goods ltv.
+monthly_expense;;FLOAT;Borrower's monthly expense.
+correspondence_city;;STRING;
+debt_to_income;;FLOAT;Borrower's debt to income ratio.
+iir;;FLOAT;Borrower's iir ratio.
+qualitative_score;;STRING;Borrower's qualitative score.
+collectibility;;STRING;Borrower's collectibility score.
+collectibility_position_date;;DATE;
+partner_credit_bureau_latest_dpd;;NUMERIC;
+partner_credit_bureau_latest_score;;NUMERIC;
+partner_credit_bureau_outstanding_amount;;NUMERIC;
+partner_credit_bureau_has_write_off_history;;BOOLEAN;
+partner_credit_bureau_has_charge_off_history;;BOOLEAN;
+partner_credit_bureau_has_ar_transfer_history;;BOOLEAN;
+partner_credit_bureau_has_restructure_history;;BOOLEAN;
+partner_credit_bureau_latest_write_off_date;;TIMESTAMP;
+partner_credit_bureau_latest_charge_off_date;;TIMESTAMP;
+partner_credit_bureau_latest_ar_transfer_date;;TIMESTAMP;
+partner_credit_bureau_latest_restructure_date;;TIMESTAMP;
+partner_credit_bureau_worst_collectability_last_3_months;;STRING;
+partner_credit_bureau_worst_collectability_last_6_months;;STRING;
+partner_credit_bureau_worst_collectability_last_12_months;;STRING;
+partner_credit_bureau_worst_collectability_last_24_months;;STRING;
+partner_credit_bureau_worst_dpd_last_3_months;;NUMERIC;
+partner_credit_bureau_worst_dpd_last_6_months;;NUMERIC;
+partner_credit_bureau_worst_dpd_last_12_months;;NUMERIC;
+partner_credit_bureau_worst_dpd_last_24_months;;NUMERIC;
+partner_credit_bureau_highest_total_balance_last_3_months;;NUMERIC;
+partner_credit_bureau_highest_total_balance_last_6_months;;NUMERIC;
+partner_credit_bureau_highest_total_balance_last_12_months;;NUMERIC;
+partner_credit_bureau_highest_total_balance_last_24_months;;NUMERIC;
+partner_credit_bureau_highest_limit;;NUMERIC;
+partner_credit_bureau_highest_balance;;NUMERIC;
+partner_credit_bureau_total_limit;;NUMERIC;
+partner_credit_bureau_min_month_of_booking;;NUMERIC;
+partner_credit_bureau_max_month_of_booking;;NUMERIC;
+partner_credit_bureau_number_of_new_facilities_last_3_months;;NUMERIC;
+partner_credit_bureau_number_of_loan_inquiries_last_3_months;;NUMERIC;
+partner_credit_bureau_latest_grade;;STRING;
+partner_credit_bureau_has_active_property_loan;;BOOLEAN;
+partner_credit_bureau_has_active_automotive_loan;;BOOLEAN;
+partner_credit_bureau_has_active_credit_card_loan;;BOOLEAN;
+partner_credit_bureau_number_of_active_facilities;;NUMERIC;
+partner_credit_bureau_number_of_new_facilities_last_month;;NUMERIC;
+partner_credit_bureau_number_of_new_facilities_last_6_months;;NUMERIC;
+partner_credit_bureau_number_of_new_facilities_last_12_months;;NUMERIC;
+partner_credit_bureau_number_of_loan_inquiries_last_month;;NUMERIC;
+partner_credit_bureau_number_of_loan_inquiries_last_6_months;;NUMERIC;
+partner_credit_bureau_number_of_loan_inquiries_last_12_months;;NUMERIC;
+partner_credit_bureau_number_of_creditors;;NUMERIC;
+partner_credit_bureau_max_tenure_in_months;;NUMERIC;
+partner_credit_bureau_number_of_active_restructured_facilities;;NUMERIC;
+scoring;;FLOAT;
+agent_code;;STRING;
+disbursement_date;;DATE;The date in Jakarta Time when the loan gets disbursed.
+flag_disbursed;;BOOLEAN;
+to_cbas;;BOOLEAN;
+cbas_score;;INTEGER;
+status_cbas_policy_check;;STRING;
+loan_application_created_at;;TIMESTAMP;Represent the timestamp of loan application creation.
+loan_application_updated_at;;TIMESTAMP;Represent the last updated timestamp of the loan application.
+loan_application_event_at;;TIMESTAMP;The timestamp when this row for an entity became valid or effective.
+cbas_hit_date;;DATE;Represent a date when cbas for the loan hit.
+cbas_hit;;BOOLEAN;
+imei_code;;STRING;
+start_date;;DATE;The date in Jakarta Time when the loan starts.
+maturity_date;;DATE;
+close_date;;DATE;
+loan_close_reason;;STRING;
+latest_record_event_at;;TIMESTAMP;
+dbt_inserted_at;;TIMESTAMP;
+remaining_tenor;;INTEGER;The remaining tenor of the loan.
+borrower_type_description;;STRING;
+gender_description;;STRING;
+borrower_id_code_description;;STRING;
+province_description;;STRING;
+city_description;;STRING;
+district_description;;STRING;
+sub_district_description;;STRING;
+source_of_income_description;;STRING;
+employer_industry_code_description;;STRING;
+marital_status_description;;STRING;
+citizen_description;;STRING;
+bank_description;;STRING;
+debtor_group_description;;STRING;
+debtor_code_description;;STRING;
+last_education_code_description;;STRING;
+profession_code_description;;STRING;
+credit_type_description;;STRING;
+credit_nature_description;;STRING;
+credit_category_description;;STRING;
+economy_sector_description;;STRING;
+purpose_of_loan_description;;STRING;
+purpose_of_opening_description;;STRING;
+usage_orientation_description;;STRING;
+portfolio_category_descriptions;;STRING;

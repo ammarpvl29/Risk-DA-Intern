@@ -317,13 +317,13 @@ TABLE: intern_data_mart_td_daily {
 - **GoPay Integration**: GoPay Term Deposit products
 - **Auto Rollover**: Automatic renewal at maturity
 
-### **5. `intern_casa_td` - CASA & Term Deposit Combined View**
+### **5. `intern_data_mart_td_daily` - CASA & Term Deposit Combined View**
 
 **Purpose**: Unified view of Current Account, Savings Account, and Term Deposit data
 
 ```sql
 -- Key Fields Structure (Based on data dictionary)
-TABLE: intern_casa_td {
+TABLE: intern_data_mart_td_daily {
   PRIMARY KEY: account_number, business_date
   
   -- Account Basics
@@ -380,7 +380,7 @@ graph TD
     A[intern_data_mart_customer] -->|customer_id| B[intern_dwh_core_daily_closing_balance]
     A -->|customer_id| C[intern_customer_individual_successful_transactions_analytics] 
     A -->|customer_id| D[intern_data_mart_td_daily]
-    A -->|customer_id| E[intern_casa_td]
+    A -->|customer_id| E[intern_data_mart_td_daily]
     
     B -->|account_number| C
     B -->|account_number| D
@@ -916,7 +916,7 @@ Term Deposit Table: intern_data_mart_td_daily
   - Maturity and rollover tracking  
   - Links to customer via customer_id
 
-CASA-TD Table: intern_casa_td
+CASA-TD Table: intern_data_mart_td_daily
   - Unified view of all account types
   - Pocket management for LFS customers
   - Comprehensive balance and activity metrics

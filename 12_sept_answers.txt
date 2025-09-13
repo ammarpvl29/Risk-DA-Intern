@@ -1,0 +1,86 @@
+Question 1 Answer - Table Differences:
+
+	Key Findings:
+	1. loan_offer_current = Current snapshot (815,839 records)
+	2. loan_offer_daily_snapshot = Historical daily snapshots (21.9M records across 41 days)
+	3. Relationship: current table MATCHES the latest business_date (Sep 11, 2025)
+
+	Schema Differences:
+	- daily_snapshot has business_date field for historical tracking
+	- current has loan_offer_event_at field (real-time timestamp)
+	- Both have expires_at, created_at timestamps
+
+	Date Fields Purpose:
+	- business_date: Daily snapshot date (for historical analysis)
+	- created_at: When loan offer was originally created
+	- expires_at: When loan offer expires
+	- loan_offer_event_at: Real-time event timestamp (current table only)
+
+	Usage Pattern:
+	- Use current for real-time analysis (latest state)
+	- Use daily_snapshot for historical trends and time-series analysis
+
+Question 2 Summary:
+
+	- August 25, 2025: 2 LFS customers offered loans
+	- Established customers: 4+ and 2+ years tenure (2021, 2023 startdates)
+	- July 25, 2025: 0 LFS customers offered loans
+
+	Key insight: Very targeted approach - loan offers going to mature LFS customers only.
+
+Question 3 Answer:
+	- From August 25, 2025 offers → Applications: 0 (no 2025 application data available)
+	- Direct Lending ('JAD') applications: 0 (JAD pattern not found in current data)
+
+Question 4 Final Answer:
+
+	From August 25, 2025 loan offers → JAG facilities (disbursed loans): 0
+
+	Detailed Analysis:
+	- 2 LFS customers received loan offers on August 25, 2025
+	- 3 total offers (one customer got 2 offers same day)
+	- Customer identifiers:
+	- Customer 1: id_number = 3277011103890001, customer_cif = 8a85410c85a665e30185ab2a82485eee
+	- Customer 2: id_number = 3674022108950005, customer_cif = 8a85488278cef4940178d45a4da241b8
+	- JAG facilities for these customers: 0 (no disbursed Direct Lending loans)
+
+	Key Insight: Despite receiving loan offers, neither of the 2 LFS customers from August 25 have JAG-type loan facilities, meaning      
+	the offers did not convert to actual disbursed Direct Lending loans.
+
+Question 5 Final Answer:
+
+	MasterLoanFacility Contents Analysis vs Handbook:
+
+	🎯 Available Data Fields:
+
+	1. ✅ Limit (Plafond): Available - Rp 500K to Rp 7M range
+	2. ✅ Outstanding: Available - Same as limit (full utilization)
+	3. ✅ Tenor: Calculated - 4.1 to 18.2 months range
+	4. ❌ Interest Rate: NOT FOUND in current schema
+
+	📊 Data vs Handbook Comparison:
+
+	| Field       | Handbook Expectation    | MasterLoanFacility Reality          | Match?     |
+	|-------------|-------------------------|-------------------------------------|------------|
+	| Interest    | Risk-based scoring      | Missing (no interest rate field)    | ❌ GAP      |
+	| Limit       | $50-$5K (Digital Loans) | Rp 500K-7M (~$30-$420)              | ✅ MATCH    |
+	| Outstanding | Real-time tracking      | Full utilization (-negative format) | ⚠️ PARTIAL |
+	| Tenor       | 3-24 months (Digital)   | 4.1-18.2 months                     | ✅ MATCH    |
+
+	🔍 Key Findings:
+
+	✅ What Works:
+	- Loan limits align with digital lending expectations
+	- Tenor range fits handbook (4-18 months vs 3-24 months expected)
+	- Outstanding tracking shows full facility utilization
+	- Status = 'A' indicates active facilities
+
+	❌ Critical Gaps:
+	- No interest rate field - Cannot analyze risk-based pricing
+	- Negative values suggest different accounting convention
+	- No partial utilization - All loans show full drawdown
+
+	📝 Data Format Notes:
+	- Negative amounts likely represent liability/debt accounting
+	- Plafond = Outstanding suggests immediate full drawdown
+	- Recent dates (Sep 2025) indicate active loan portfolio
