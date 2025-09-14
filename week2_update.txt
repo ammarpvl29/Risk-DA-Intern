@@ -1,0 +1,104 @@
+● Great! You're moving into more advanced analytics territory. Let me guide you through this comprehensive customer and loan analysis step by step.
+
+● Tomorrow's Task Breakdown: Advanced Customer & Loan Analytics
+
+  This is a comprehensive analytics task that builds on your query #3. Let me guide you through the approach:
+
+  Step 1: Customer Table Analytics Foundation
+
+  First, let's start with the base customer selection:
+
+  -- Start here tomorrow - basic customer foundation
+  WITH customer_base AS (
+      SELECT
+          business_date,
+          customer_id,
+          customer_source,
+          customer_status,
+          customer_status_date,
+          date_of_birth,
+          province,
+          phone_number,
+          marital_status,
+          education,
+          partner_name,
+          id_number as id_number_lfs,
+          customer_start_date  -- You'll need this for MOB calculations
+      FROM `data-prd-adhoc.credit_risk_adhoc.intern_data_mart_customer`
+      WHERE business_date = '2025-08-31'
+        AND customer_source = 'LFS'
+  ),
+
+  Questions for you to think about:
+  1. Do you need to check the customer table metadata for customer_start_date field?
+  2. What other fields might you need for the calculations?
+
+  Step 2: Customer Analytics Columns (Your Challenge)
+
+  Tomorrow's learning challenges:
+
+  Challenge A: Age Generation Logic
+
+  -- Your task: Build this CASE WHEN logic
+  CASE
+      WHEN DATE_DIFF(business_date, date_of_birth, YEAR) BETWEEN ?? AND ?? THEN 'Generation Z'
+      WHEN DATE_DIFF(business_date, date_of_birth, YEAR) BETWEEN ?? AND ?? THEN 'Millennials'
+      -- Continue for other generations...
+  END as age_generation
+
+  Research needed: What are the age ranges for each generation?
+
+  Challenge B: MOB Calculations
+
+  -- Your task: Complete these date calculations
+  DATE_DIFF('2025-08-31', customer_start_date, MONTH) as mob_funding,
+  DATE_DIFF(CURRENT_DATE(), customer_start_date, MONTH) as mob_funding_realtime
+
+  Challenge C: Geographic Flags
+
+  You'll need to research:
+  - Which provinces are Jabodetabek?
+  - Which provinces are Jawa Bali?
+
+  Challenge D: Phone Number Prefix Logic
+
+  -- Your task: Research Indonesian telecom prefixes
+  CASE
+      WHEN LEFT(phone_number, 4) IN ('0811', '0812', ...) THEN 'TSEL'
+      -- What are the other prefixes?
+  END as phone_prefix
+
+  Step 3: Integration Strategy
+
+  Building on your existing Query #3 template:
+  -- Use your existing structure but extend it:
+  WITH offer AS (
+      -- Your existing offer logic
+  ),
+  customer_analytics AS (
+      -- New: Enhanced customer analytics
+  ),
+  loan_application_analytics AS (
+      -- New: Application analytics
+  ),
+  final_result AS (
+      -- Join everything with all the new columns
+  )
+
+  Learning Questions for Tomorrow:
+
+  1. Data Research: What are the Indonesian telecom prefixes?
+  2. Business Logic: What age ranges define each generation?
+  3. Geographic Knowledge: Which cities/provinces belong to Jabodetabek and Jawa Bali?
+  4. Field Mapping: Do you need to check metadata for any missing fields?
+
+  Recommended Approach for Tomorrow:
+
+  1. Start Small: Build the basic customer CTE first
+  2. Add One Column at a Time: Test each calculated column individually
+  3. Research First: Look up the business rules you need
+  4. Follow Bank Jago Method: Use CTEs to break complex logic into steps
+
+  Would you like me to help you research any of these business rules now, or do you prefer to tackle them fresh tomorrow?
+
+● This will be an excellent learning exercise in building comprehensive customer analytics! The task combines data engineering, business logic, and Indonesian market knowledge.
