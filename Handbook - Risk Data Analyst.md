@@ -1899,3 +1899,190 @@ masa depan.
 4. **Restrukturisasi** → Negosiasi ulang syarat agar debitur bisa bayar.
 5. **Berhasil Lunas** → Kredit selesai, riwayat positif.
 6. **Gagal Bayar & Write-Off** → Kredit macet, kerugian bank, debitur masuk blacklist.
+
+
+Appendix
+
+### Definisi & Kegunaan Tabel Transaksi / Mutasi Bank
+
+Tabel transaksi atau tabel mutasi bank adalah catatan rinci seluruh pergerakan dana dalam
+rekening nasabah, baik debet (keluar) maupun kredit (masuk). Tabel ini juga dikenal sebagai
+transaction ledger atau account statement.
+Biasanya mencakup kolom:
+· • Tanggal transaksi
+· • Jenis transaksi (transfer, setor tunai, tarik tunai, pembayaran, bunga, fee, dll.)
+· • Keterangan (deskripsi, counterparty, nomor referensi)
+· • Debet (uang keluar)
+· • Kredit (uang masuk)
+· • Saldo akhir setelah transaksi
+
+- Tipe transaksi
+
+**Kegunaan bagi Nasabah**
+
+1. Monitoring keuangan pribadi/ usaha → melihat arus kas keluar-masuk dan saldo akhir.
+2. Bukti transaksi → referensi resmi untuk klaim atau sengketa transfer.
+3. Perencanaan keuangan → membantu analisis pola pengeluaran/pemasukan dan budgeting.
+**Kegunaan bagi Bank**
+1. Operasional & Akuntansi → menyusun rekening koran, rekonsiliasi antarbank.
+2. Customer Service → menyediakan data mutasi untuk layanan komplain.
+3. Produk & Layanan → dasar analisis perilaku nasabah dan cross-selling.
+4. Regulasi & Audit → bagian dari laporan resmi ke OJK, BI, dan auditor.
+**Kegunaan bagi Risk Analytics**
+1. Credit Risk Analysis → menganalisis cashflow untuk menilai kemampuan bayar pinjaman.
+2. Fraud & AML (Anti Money Laundering) → mendeteksi pola transaksi mencurigakan.
+3. Behavioral Scoring → model perilaku berdasarkan mutasi nasabah.
+4. Liquidity & Risk Management → agregasi mutasi untuk prediksi likuiditas dan konsentrasi
+dana.
+
+
+##### BAB II
+
+##### SKEMA PRODUK
+
+Detail skema produk untuk Digital Lending adalah sebagai berikut:
+
+```
+Installment Loan Pinjaman Rekening Koran
+```
+```
+Tipe Produk
+```
+```
+Installment loan Pinjaman Rekening Koran
+dalam bentuk dana tunai
+```
+```
+Tujuan Pembiayaan
+```
+```
+Konsumtif,
+tidak untuk tujuan investasi, atau
+transaksi valuta asing terhadap rupiah
+```
+```
+Konsumtif,
+tidak untuk tujuan investasi, atau
+transaksi valuta asing terhadap rupiah
+Mata Uang Rupiah Rupiah
+Tipe Fasilitas Revolving Revolving
+Expiry fasilitas hingga 3 tahun hingga 1 tahun
+Tenor 1 - 12 bulan n/a
+```
+```
+Penarikan dana multipleminimum^ drawdown penarikan^ diperbolehkan. Rp 500rb
+```
+```
+multiple drawdown diperbolehkan.
+minimum penarikan menyesuaikan
+dengan batas minimum masing-masing
+metode money out
+Bunga* FlatDihitung^ rate: dalammulai^ darieffective^ 0.59% rate^ (30 / 360) Efektif mulai dari 12% per tahun
+```
+```
+Biaya*
+```
+```
+Admin: free
+Provision: free
+Monthly: free
+Service: free
+Maintenance: free
+```
+```
+Admin: free
+Provision: free
+Monthly: free
+Service: free
+Maintenance: free
+Denda keterlambatan* 0.1% dari cicilan belum terbayar 48% p.a. dari overlimit amount
+```
+```
+Installment type
+```
+- Installment (annuity) - _fixed installment_
+- Pokok + Bunga
+- cicilan pertama sama dengan cicilan
+sisanya meskipun jumlah hari bulan
+pertama tidak 30 hari
+
+```
+n/.a
+```
+```
+Pembayaran minimum** Sesuai jumlah angsuran minimum 6% per bulan**
+```
+```
+Hirarki pembayaran**
+```
+1. Pokok
+2. Bunga
+3. Biaya & Penalti
+    1. Pokok
+    2. Bunga
+    3. Biaya & Penalti
+
+
+```
+Metode pembebanan
+bunga dan biaya
+```
+- Perhitungan akrual bunga pada
+    30/360
+- Bunga pinjaman dihitung secara
+    bulanan dari pokok pinjaman
+- Pendebetan bunga dan/atau biaya
+    (jika ada) setiap tanggal jatuh tempo
+    atau sesuai dengan ketentuan
+    internal yang berlaku
+       - Perhitungan akrual bunga pada
+          aktual/360
+       - Bunga pinjaman dihitung secara
+          harian dari saldo debet rekening giro
+       - Pendebetan bunga dan.atau biaya
+          (jika ada) setiap tanggal 28 atau
+          sesuai dengan ketentuan internal
+          yang berlaku
+
+```
+Pelunasan dipercepat
+```
+```
+Diperbolehkan
+a) Early repayment : P + I (as per original
+installment schedule)
+b) Early termination : P+I (actual interest
+until the early termination + remaining
+principal)
+```
+```
+n/a
+```
+```
+Penalti pelunasan
+dipercepat Tidak^ ada^ n/a^
+```
+```
+Perhitungan CKPN
+```
+```
+Mengacu pada Kebijakan Penurunan Nilai
+Instrumen Keuangan.
+Perhitungan CKPN mengikuti fasilitas
+Uncommitted***)
+```
+```
+Mengacu pada Kebijakan Penurunan
+Nilai Instrumen Keuangan.
+Perhitungan CKPN mengikuti fasilitas
+Committed
+```
+* _Pricing_ akan diatur lebih detail di bab V
+** Skema berlaku sesuai dengan kapabilitas sistem dan mungkin dapat berubah sewaktu-waktu dengan
+addendum yang diusulkan oleh Digital Lending team dan direkomendasikan oleh Credit Risk
+Management dan Integrated Risk Management Director, dan disetujui oleh Partnership Business Director
+***Diperhitungkan sebagai _uncommitted_ dengan mempertimbangkan bahwa bank melakukan review
+berkala terhadap fasilitas aktif untuk melakukan pengaturan limit termasuk memblokir limit.
+
+
+

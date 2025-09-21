@@ -1,0 +1,57 @@
+field name;mode;type;description
+business_date;NULLABLE;DATE;Business date when the record start to changed/added.
+status;NULLABLE;STRING;Status of facility account
+branch;NULLABLE;STRING;System unique identifier from the branch table
+cif;NULLABLE;STRING;The unique identifier for a customer, which correlates to customer_id field from customer table
+account_type;NULLABLE;STRING;Type of account
+account_name;NULLABLE;STRING;The customer name which owns the loan account, account holder name
+account_officer_code;NULLABLE;STRING;Account officer code identifier who takes care of the financial bookkeeping and records of the loan account.
+facility_reference;NULLABLE;STRING;Reference to line_of_credit table, similar to line_of_credit number (not id)
+facility_type;NULLABLE;STRING;Facility type
+nomor_pk_awal;NULLABLE;STRING;Initial agreement number for the loan account
+tanggal_pk_awal;NULLABLE;DATE;Initial agreement date
+nomor_pk_perpanjangan;NULLABLE;STRING;Extended Agreement Number
+tanggal_pk_perpanjangan;NULLABLE;DATE;Renewal agreement date for the loan account
+frekuensi_perpanjangan;NULLABLE;INTEGER;Renewal sequence
+currency;NULLABLE;STRING;The 3-digit currency code for the loan account
+plafond;NULLABLE;BIGNUMERIC;The amount of facility/line of credit related to facility account
+unused_amount;NULLABLE;BIGNUMERIC;The amount of unused facility/line of credit related to loan account
+is_uncommitted;NULLABLE;BOOLEAN;Flag that indicates uncommited loan
+loan_branch;NULLABLE;STRING;Registering branch for following loan account
+loan_account_type;NULLABLE;STRING;The type of the loan account
+loan_cif;NULLABLE;STRING;Customer ID of loan
+loan_sequence;NULLABLE;STRING;The order sequence number based on the account opening sequence on the same customer
+start_date;NULLABLE;DATE;Date of when this account was last approved or started'
+maturity_date;NULLABLE;DATE;Date when this account was matured
+last_review_date;NULLABLE;DATE;Last review date for this line of credit
+next_review_date;NULLABLE;DATE;Next review date for this line of credit
+review_frequency;NULLABLE;STRING;Review frequency
+description;NULLABLE;STRING;Optional notes for selected line of credit
+is_revolving;NULLABLE;BOOLEAN;Flag whether this is revolving facility
+is_asuransi;NULLABLE;BOOLEAN;Flag whether facility has insurance
+has_channeling;NULLABLE;BOOLEAN;Flag whether has channelling
+is_tangible;NULLABLE;BOOLEAN;Flag for tangible status
+is_collateral_required;NULLABLE;BOOLEAN;Flag whether collateral is required
+is_sindikasi;NULLABLE;BOOLEAN;Flag on syndication
+is_multi_customer;NULLABLE;BOOLEAN;Flag whether multi customer
+is_multi_currency;NULLABLE;BOOLEAN;Flag whether multi currency
+kredit_program_pemerintah;NULLABLE;STRING;Flag to indicate if this facility facilitated by government
+kategori_debitur;NULLABLE;STRING;Category of the Debtor based on Regulatory definition
+kategori_portfolio;NULLABLE;STRING;Category of Portfolio based on Regulatory definition
+jenis_kredit;NULLABLE;STRING;Loan Type based on Regulatory definition
+sifat_kredit;NULLABLE;STRING;Loan Characteristic based on Regulatory definition
+jenis_penggunaan;NULLABLE;STRING;Loan Usage Type based on Regulatory definition
+orientasi_penggunaan;NULLABLE;STRING;Loan Usage Orientation based on Regulatory definition
+kategori_pengukuran;NULLABLE;STRING;Category of Measurement Methods based on Regulatory definition
+sektor_ekonomi;NULLABLE;STRING;Economic Sector based on Regulatory definition
+lokasi_proyek;NULLABLE;STRING;Project Location, 4 digit indicating city code in Indonesia
+golongan_kredit;NULLABLE;STRING;Loan Category based on Regulatory definition
+jenis_suku_bunga;NULLABLE;STRING;The loan account interest type. Can be one of SIMPLE_INTEREST or CAPITALIZED_INTEREST
+nilai_proyek;NULLABLE;NUMERIC;The project amount related to the facility/line of credit
+plafond_awal;NULLABLE;NUMERIC;The amount of facility/line of credit related to facility account
+source_system;NULLABLE;STRING;Source system
+business_stream;NULLABLE;STRING;Business stream
+deleted;NULLABLE;BOOLEAN;Flag for soft deletion
+takeover_code;;STRING;Type of takeover loan
+origination_system;;STRING;Name of the origination system that indicates which system registered the data into the core banking platform. Example values include 'LP', 'MAMBU', 'WINCORE', and 'OLIBS724'.
+core_banking_system;;STRING;Name of the core banking system that indicates the core banking platform used to process core banking operations. Example values include 'MAMBU', 'WINCORE', and 'OLIBS724'.
