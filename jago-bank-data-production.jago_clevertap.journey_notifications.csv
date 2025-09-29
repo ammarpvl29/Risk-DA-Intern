@@ -1,0 +1,11 @@
+field name;type;description
+event_ts;TIMESTAMP;Event timestamp
+event_date;DATE;Date of when event happened
+customer_id;STRING;Unique customer iddentifier
+event_name;STRING;Name of the events related to user journey funnel
+ct_session_id;INTEGER;Event property, where the event belong to which CleverTap session id
+journey_id;INTEGER;Event property, where the event belong to which journey
+campaign_id;STRING;Event property, where the event belong to which campaign / node (id)
+campaign_name;STRING;Event property, where the event belong to which campaign (name)
+campaign_type;STRING;Event property, where the event belong to which campaign
+record_inserted_at;TIMESTAMP;Record inserted at, in UTC timezone

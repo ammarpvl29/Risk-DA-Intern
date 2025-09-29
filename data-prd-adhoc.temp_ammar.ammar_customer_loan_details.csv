@@ -1,0 +1,21 @@
+field name;type;description
+business_date;DATE;
+id_number;STRING;
+customer_id;STRING;
+expires_at;DATE;
+created_at;DATE;
+agreement_agreed_at;TIMESTAMP;
+is_carry_over_offer;INTEGER;
+is_new_offer;INTEGER;
+status;STRING;
+cif;STRING;
+facility_reference;STRING;
+tanggal_pk_awal;DATE;
+plafond;BIGNUMERIC;
+unused_amount;BIGNUMERIC;
+start_date;DATE;
+maturity_date;DATE;
+flag_has_facility;INTEGER;
+flag_takeup;INTEGER;
+all_offer;INTEGER;
+rn;INTEGER;

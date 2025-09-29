@@ -1,0 +1,11 @@
+field name;type;description
+Contact;INTEGER;
+SentAt;TIMESTAMP;
+DeliveredAt;TIMESTAMP;
+ReadAt;TIMESTAMP;
+Status;STRING;
+FileName;STRING;
+TemplateName;STRING;
+customer_id;STRING;
+phone;INTEGER;
+ScheduledAt;TIMESTAMP;
