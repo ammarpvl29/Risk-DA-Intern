@@ -1,0 +1,8 @@
+field name;type
+lfs_customer_id;STRING
+facility_start_date;DATE
+reff_number;STRING
+ktp;STRING
+appid;INTEGER
+calibrated_scores;FLOAT
+calibrated_scores_bin;STRING

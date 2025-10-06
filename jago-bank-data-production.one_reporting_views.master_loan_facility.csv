@@ -1,0 +1,58 @@
+field name;type;description
+business_date;DATE;Business date when the record start to changed/added.
+status;STRING;Status of facility account
+branch;STRING;System unique identifier from the branch table
+cif;STRING;The unique identifier for a customer, which correlates to customer_id field from customer table
+account_type;STRING;Type of account
+account_name;STRING;The customer name which owns the loan account, account holder name
+account_officer_code;STRING;Account officer code identifier who takes care of the financial bookkeeping and records of the loan account.
+facility_reference;STRING;Reference to line_of_credit table, similar to line_of_credit number (not id)
+facility_type;STRING;Facility type
+nomor_pk_awal;STRING;Initial agreement number for the loan account
+tanggal_pk_awal;DATE;Initial agreement date
+nomor_pk_perpanjangan;STRING;Extended Agreement Number
+tanggal_pk_perpanjangan;DATE;Renewal agreement date for the loan account
+frekuensi_perpanjangan;INTEGER;Renewal sequence
+currency;STRING;The 3-digit currency code for the loan account
+plafond;NUMERIC;The amount of facility/line of credit related to facility account
+unused_amount;NUMERIC;The amount of unused facility/line of credit related to loan account
+is_uncommitted;BOOLEAN;Flag that indicates uncommited loan
+loan_branch;STRING;Registering branch for following loan account
+loan_account_type;STRING;The type of the loan account
+loan_cif;STRING;Customer ID of loan
+loan_sequence;STRING;The order sequence number based on the account opening sequence on the same customer
+start_date;DATE;Date of when this account was last approved or started'
+maturity_date;DATE;Date when this account was matured
+last_review_date;DATE;Last review date for this line of credit
+next_review_date;DATE;Next review date for this line of credit
+review_frequency;STRING;Review frequency
+description;STRING;Optional notes for selected line of credit
+is_revolving;BOOLEAN;Flag whether this is revolving facility
+is_asuransi;BOOLEAN;Flag whether facility has insurance
+has_channeling;BOOLEAN;Flag whether has channelling
+is_tangible;BOOLEAN;Flag for tangible status
+is_collateral_required;BOOLEAN;Flag whether collateral is required
+is_sindikasi;BOOLEAN;Flag on syndication
+is_multi_customer;BOOLEAN;Flag whether multi customer
+is_multi_currency;BOOLEAN;Flag whether multi currency
+kredit_program_pemerintah;STRING;Flag to indicate if this facility facilitated by government
+kategori_debitur;STRING;Category of the Debtor based on Regulatory definition
+kategori_portfolio;STRING;Category of Portfolio based on Regulatory definition
+jenis_kredit;STRING;Loan Type based on Regulatory definition
+sifat_kredit;STRING;Loan Characteristic based on Regulatory definition
+jenis_penggunaan;STRING;Loan Usage Type based on Regulatory definition
+orientasi_penggunaan;STRING;Loan Usage Orientation based on Regulatory definition
+kategori_pengukuran;STRING;Category of Measurement Methods based on Regulatory definition
+sektor_ekonomi;STRING;Economic Sector based on Regulatory definition
+lokasi_proyek;STRING;Project Location, 4 digit indicating city code in Indonesia
+golongan_kredit;STRING;Loan Category based on Regulatory definition
+jenis_suku_bunga;STRING;The loan account interest type. Can be one of SIMPLE_INTEREST or CAPITALIZED_INTEREST
+nilai_proyek;NUMERIC;The project amount related to the facility/line of credit
+plafond_awal;NUMERIC;The amount of facility/line of credit related to facility account
+source_system;STRING;Source system
+business_stream;STRING;Business stream
+inserted_at;TIMESTAMP;
+inserted_by;STRING;
+takeover_code;STRING;Type of takeover loan
+origination_system;STRING;Name of the origination system that indicates which system registered the data into the core banking platform. Example values include 'LP', 'MAMBU', 'WINCORE', and 'OLIBS724'.
+core_banking_system;STRING;Name of the core banking system that indicates the core banking platform used to process core banking operations. Example values include 'MAMBU', 'WINCORE', and 'OLIBS724'.

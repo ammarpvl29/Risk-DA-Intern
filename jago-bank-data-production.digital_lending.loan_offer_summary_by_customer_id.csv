@@ -1,0 +1,40 @@
+field name;type;description
+customer_id;STRING;Customer unique ID (based on LFS data)
+id_number;STRING;Customer ID number (based on LFS data)
+product_code;STRING;Loan product code (JAG01 is the product code for digital lending product)
+loan_offer_min_tenor;NUMERIC;Minimum tenor information derived from loan offer collection
+loan_offer_max_tenor;NUMERIC;Maximum tenor information derived from loan offer collection
+loan_offer_facility_limit;NUMERIC;Facility limit information derived from loan offer collection
+loan_offer_monthly_flat_rate;NUMERIC;Monthly flat rate information derived from loan offer collection
+loan_offer_risk_bracket;STRING;Risk bracket information derived from loan offer collection
+partner_name;STRING;Registration channel information derived from customer registration data
+occupation;STRING;Occupation information derived from customer data
+age_group;STRING;Age information derived from customer data
+monthly_income_category;STRING;Monthly income information derived from customer data
+earliest_loan_application_date;DATE;Earliest approved loan application date in Jakarta date
+latest_loan_application_date;DATE;Latest approved loan application date in Jakarta date
+earliest_loan_maturity_date;DATE;Earliest loan maturity date in Jakarta date
+latest_loan_maturity_date;DATE;Latest loan maturity date in Jakarta date
+no_of_loan_applications;INTEGER;Number of loan applications (all status)
+no_of_approved_loan_applications;INTEGER;Number of approved loan applications
+no_of_active_loan_applications;INTEGER;Number of active loan applications (active loans that have not been closed)
+no_of_closed_loan_applications;INTEGER;Number of closed loan applications
+no_of_rejected_loan_applications;INTEGER;Number of rejected loan applications
+max_tenure_approved_loan_application;INTEGER;Maximum loan tenure for all loans (including closed)
+max_tenure_active_loan_application;INTEGER;Maximum loan tenure for active loans
+max_approved_loan_amount;FLOAT;Maximum approved loan amount
+min_approved_loan_amount;FLOAT;Minimum approved loan amount
+sum_approved_loan_amount;FLOAT;Aggregate approved loan amount (including closed)
+avg_approved_loan_amount;FLOAT;Average approved loan amount
+sum_active_loan_amount;FLOAT;Aggregate active loan amount
+sum_rejected_loan_amount;FLOAT;Aggregate rejected loan amount
+all_time_utilization;FLOAT;Loan facility utilization based on aggregate of approved loan amount
+active_utilization;FLOAT;Loan facility utilization based on aggregate of active loan amount
+max_dpd_principal;INTEGER;Max DPD principal
+max_dpd_interest;INTEGER;Max DPD interest
+max_dpd_final;INTEGER;Max DPD final
+limit_bracket;STRING;Facility limit bracket
+loan_offer_created_datetime;DATETIME;Loan offer created datetime (in Jakarta time)
+loan_offer_facillity_expiry_datetime;DATETIME;Loan offer facility expiry datetime (in Jakarta time)
+loan_offer_expiry_datetime;DATETIME;Loan offer expiry datetime (in Jakarta time)
+is_expired;BOOLEAN;Loan offer facility expiry information based on the expiry date

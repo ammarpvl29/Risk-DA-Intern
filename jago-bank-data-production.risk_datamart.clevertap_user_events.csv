@@ -1,0 +1,16 @@
+field name;type;description
+time;TIMESTAMP;The time of event occurrence from clevertap
+customer_id;STRING;Customer ID from Clevertap
+event_name;STRING;Name of the Event
+brand_model;STRING;Brand and model of the device
+device_platform;STRING;Platform/Operating System of the device
+device_manufacture;STRING;Manufacture of the device
+device_model;STRING;Model of the device
+device_city;STRING;The city where the event happened
+device_province;STRING;The province where the event happened
+device_country;STRING;The country where the event happened
+app_version;STRING;Version of the app used
+jago_device_id;STRING;Hardware ID of the device
+session_id;STRING;The session ID of the current Clevertap event
+inserted_at;TIMESTAMP;The system timestamp when the row was inserted
+inserted_by;STRING;The identifier of the process, system or person who inserted the row to the table

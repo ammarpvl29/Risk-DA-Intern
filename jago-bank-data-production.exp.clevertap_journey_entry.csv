@@ -1,0 +1,6 @@
+field name;type
+event_id;STRING
+customer_id;STRING
+journey_entered;STRING
+record_inserted_at;TIMESTAMP
+journey_type;STRING

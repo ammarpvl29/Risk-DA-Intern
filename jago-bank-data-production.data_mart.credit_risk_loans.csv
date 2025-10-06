@@ -1,0 +1,78 @@
+field name;type;description
+business_date;DATE;Data as of EOD of this date
+credit_risk_loans_id;STRING;Unique table identifier
+single_customer_identifier;STRING;Unique identifier of customer based on single_customer_identifier table
+customer_id;STRING;customer id / cif
+account_number;STRING;account number / nomor_rekening
+initial_agreement_number;STRING;initial_agreement_number / nomor_pk_awal
+deal_reference;STRING;deal reference number
+deal_type;STRING;deal type
+booking_date;DATE;Date the loan started / booked.
+booking_month;STRING;Booking Month (in yyyymm format)
+maturity_date;DATE;Date of Maturity of the Loan
+tenor;INTEGER;Duration of the loan in months
+months_on_book;INTEGER;Months on Book, Period from the loan booking to business date in months
+is_multiple_cif;INTEGER;tagging if customer has multiple cif
+outstanding_balance;BIGNUMERIC;Outstanding Balance
+fair_value;BIGNUMERIC;Fair Value
+unused_facility;BIGNUMERIC;Unused Facility
+loan_amount;BIGNUMERIC;Loan Amount / Plafond
+initial_loan_amount;BIGNUMERIC;Initial Loan Amount / Plafond Awal
+limit_first;BIGNUMERIC;First non-null value of initial_loan_amount and loan_amount
+collect;INTEGER;collectibility status of the loan account
+collect_cif;INTEGER;collectibility status of the loan account on CIF level
+broker_code;STRING;Used to identify the product group of an account (product_group in ORV)
+business_stream;STRING;Stream of business where the loan account came from. Sharia or Conventional
+is_restructured;INTEGER;Tagging if account is restructured. 1 if restructured else 0
+interest_rate;BIGNUMERIC;Interest Rate of the Loan
+economic_sector;STRING;
+payment_default_month;INTEGER;1 if first payment default on the month, 2 if second payment default on the month, 3 if third payment default on the month else NULL first payment default: MOB=1, with DPD Final > 0 (NON SFS) MOB=3, with DPD Final > 0 (SFS) for second and third, just need to add +1/+2 on MOB
+dpd_bucket_principal;INTEGER;days_past_due_principal in 30 days bucket
+dpd_bucket_interest;INTEGER;days_past_due_interest in 30 days bucket
+dpd_bucket_final;INTEGER;days_past_due_final in 30 days bucket
+dpd_bucket_max;INTEGER;days_past_due_max in 30 days bucket
+no_of_active_loan_facilities;INTEGER;Number of Active Facilities
+earliest_start_date_of_active_facilities;DATE;Earliest start date of all active facilities
+farthest_maturity_date_of_active_facilities;DATE;Farthest maturity date of all active facilities
+days_past_due_principal;INTEGER;Number of days after the payment on principal is missed
+days_past_due_interest;INTEGER;Number of days after the payment on interest is missed
+days_past_due_final;INTEGER;Number of days after missing payment, if customer has more than one loan, if one loan is missed, the rest of the loans, even if in current status, will inherit the status of the past due loan
+days_past_due_max;INTEGER;GREATEST(pastdue_days_principal, pastdue_days_interest)
+first_payment_default_ever;BOOLEAN;If loan account defaulted on the first payment schedule. Once loan_account is tagged, the tagging will be retained thru the life of the loan
+second_payment_default_ever;BOOLEAN;If loan account defaulted on the second payment schedule. Once loan_account is tagged, the tagging will be retained thru the life of the loan
+third_payment_default_ever;BOOLEAN;If loan account defaulted on the third payment schedule. Once loan_account is tagged, the tagging will be retained thru the life of the loan
+days_past_due_principal_ever;INTEGER;Maximum days_past_due_principal across all previous month-ends including current business date
+days_past_due_interest_ever;INTEGER;Maximum days_past_due_interest across all previous month-ends including current business date
+days_past_due_max_ever;INTEGER;Maximum days_past_due_max across all previous month-ends including current business date
+days_past_due_final_ever;INTEGER;Maximum days_past_due_final across all previous month-ends including current business date
+days_past_due_principal_daily_ever;INTEGER;Maximum days_past_due_principal across all previous month-ends including current business date, compared on a daily basis
+days_past_due_interest_daily_ever;INTEGER;Maximum days_past_due_interest across all previous month-ends including current business date, compared on a daily basis
+days_past_due_max_daily_ever;INTEGER;Maximum days_past_due_max across all previous month-ends including current business date, compared on a daily basis
+days_past_due_final_daily_ever;INTEGER;Maximum days_past_due_final across all previous month-ends including current business date, compared on a daily basis
+balance_7dpd_max_ever;BIGNUMERIC;Outstanding balance on the first instance where days_past_due_max >= 7, month-end comparison only
+balance_15dpd_max_ever;BIGNUMERIC;Outstanding balance on the first instance where days_past_due_max >= 15, month-end comparison only
+balance_30dpd_max_ever;BIGNUMERIC;Outstanding balance on the first instance where days_past_due_max >= 30, month-end comparison only
+balance_7dpd_max_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where days_past_due_max >= 7, daily comparison
+balance_15dpd_max_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where days_past_due_max >= 15, daily comparison
+balance_30dpd_max_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where days_past_due_max >= 30, daily comparison
+balance_7dpd_final_ever;BIGNUMERIC;Outstanding balance on the first instance where days_past_due_final >= 7, month-end comparison only
+balance_15dpd_final_ever;BIGNUMERIC;Outstanding balance on the first instance where days_past_due_final >= 15, month-end comparison only
+balance_30dpd_final_ever;BIGNUMERIC;Outstanding balance on the first instance where days_past_due_final >= 30, month-end comparison only
+balance_7dpd_final_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where days_past_due_final >= 7, daily comparison
+balance_15dpd_final_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where days_past_due_final >= 15, daily comparison
+balance_30dpd_final_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where days_past_due_final >= 30, daily comparison
+latest_record_event_at;DATE;Event timestamp of the original source
+dbt_inserted_at;TIMESTAMP;The system timestamp when the row was inserted
+loan_application_key;STRING;
+refinancing_tag;INTEGER;Tagging for refinancing. 1 for first financing, 2 for second financing, etc..
+product_group_id;INTEGER;unique id to identify product group
+product_group;STRING;Credit Risk Product Grouping, based on FDM product group
+partner_name;STRING;Partner Name
+segment_group;STRING;Credit Risk Segment Group
+segment;STRING;Credit Risk Segment
+risk_assessment_code;STRING;Risk Assessment Code
+risk_group;STRING;Credit Risk Group
+application_risk_group;STRING;Risk Group from loan application
+type_group;STRING;Credit Risk Group Type
+business_group;STRING;Credit Risk Business Group
+bank_group;STRING;Credit Risk Bank Group

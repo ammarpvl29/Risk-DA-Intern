@@ -1,0 +1,46 @@
+field name;type;description
+BusinessDate;DATE;Business date when the record start to changed/added.
+Branch;STRING;System unique identifier from the branch table
+AccountType;STRING;The type of the loan account
+CIF;STRING;Customer CIF associated with the loan account, from customer table
+Sequence;STRING;The order sequence number based on the account opening sequence on the same customer
+Account;STRING;Loan account number that is useful to differentiate transactional_activity
+AccountName;STRING;The customer name which owns the loan account
+DealRef;STRING;The deal reference number
+DealType;STRING;The code of the deal type
+NomorPKAwal;STRING;Initial agreement number for the loan account
+NomorPKPerpanjangan;STRING;Renewal agreement number for the loan account
+TanggalPKAwal;DATE;Initial agreement date for the loan account
+StartDate;DATE;Date when this account was last approved or started
+MaturityDate;DATE;Date when this account was matured
+AOCodeCIF;STRING;Account officer code identifier who takes care of the financial bookkeeping and records of the loan account.
+AOCode;STRING;Account officer code identifier who takes care of the financial bookkeeping and records of the loan account.
+Ccy;STRING;The currency code for the loan account
+InterestRate;BIGNUMERIC;The interest rate applied to the loan
+PlafondAwal;BIGNUMERIC;The initial loan amount that is given to the customer
+Plafond;BIGNUMERIC;Current maximum loan amount that is given to the customer
+Outstanding;BIGNUMERIC;Outstanding balance amount of the loan account
+InitialFee;BIGNUMERIC;Initial fee amount
+AmortizedFee;BIGNUMERIC;Amortized fee amount
+FairValue;BIGNUMERIC;Fair value amount
+InterestAccrue;BIGNUMERIC;The total interest accrued by this loan account.
+CollectAccount;STRING;Loan collectibility status on account level
+CollectCIF;STRING;Customer collectibility status on CIF level across loans in same core banking system
+Collect;STRING;Customer collectibility status on customer level across multiple core banking systems
+DPDPrincipal;INTEGER;Specify how many days the account has been late for principal payments
+DPDInterest;INTEGER;Specify how many days the account has been late for interest payments
+DPDCIF;NUMERIC;NA
+DPDFinal;INTEGER;Specify how many days the account has been late for principal/interest payments
+TunggakanPokok;BIGNUMERIC;How much principal due for this loan account
+TunggakanBunga;BIGNUMERIC;How much interest due for this loan account
+TanggalTunggakanPokok;DATE;Principal payment due date
+TanggalTunggakanBunga;DATE;Interest payment due date
+DendaPokok;BIGNUMERIC;The amount of principal penalty for the account
+DendaBunga;BIGNUMERIC;The amount of interest penalty for the account
+FrekuensiTunggak;INTEGER;Loan default frequency
+CKPNType;STRING;Type of CKPN
+GLPbyad;STRING;GL Account to record Accrued Interest Income transaction. PBYAD = Pendapatan Bunga yang Akan Diterima
+GLPbdp;STRING;GL Account to record Off-Balance Sheet Accrued Interest Income transaction. PBDP = Pendapatan Bunga Dalam Penyelesaian
+SourceSystem;STRING;The name of Source System from which the data is coming
+EIRRate;NUMERIC;Effective Interest Rate
+SingleCustomerIdentifier;STRING;A number/identifier which could uniquely identify customer across different core banking systems

@@ -1,0 +1,173 @@
+field name;type;description
+business_date;DATE;The date that represent the records state at the end of the day
+cif;STRING;Customer ID that is recorded in the system
+facility_reference;STRING;Reference number of the facility
+deal_reference;STRING;The loan deal reference number
+nomor_pk_awal;STRING;Initial Agreement Number
+start_date;DATE;Start Date of the loan
+maturity_date;DATE;Date of Maturity of the Loan
+closed_date;DATE;When a loan status is CLOSED, then it contains when this loan is closed
+plafond;BIGNUMERIC;The highest amount of loan can be given to the customer for this particular loan account
+active_first_eom;BOOLEAN;Indicate whether the loan is active on the mentioned business_date
+deal_type;STRING;The id of deal type, usually it contain 5 digit alphanumeric. For example: ATO2L, MAB01 and ADK03
+product_type;STRING;The type of loan product. for example: MAB, KPI, Adakami etc.
+status;STRING;The Loan status
+account_number;STRING;The Loan account number
+first_payment_default_ever;BOOLEAN;Field for flagging is the loan default during the first payment, if yes then true, if no then false.
+second_payment_default_ever;BOOLEAN;Field for flagging is the loan default during the second payment, if yes then true, if no then false.
+third_payment_default_ever;BOOLEAN;Field for flagging is the loan default during the third payment, if yes then true, if no then false.
+balance_xdpd_max_ever;BIGNUMERIC;Outstanding balance on the first instance where maximum dpd > x, month-end comparison only
+balance_3dpd_max_ever;BIGNUMERIC;Outstanding balance on the first instance where maximum dpd > 3, month-end comparison only
+balance_7dpd_max_ever;BIGNUMERIC;Outstanding balance on the first instance where maximum dpd > 7, month-end comparison only
+balance_30dpd_max_ever;BIGNUMERIC;Outstanding balance on the first instance where maximum dpd > 30, month-end comparison only
+balance_60dpd_max_ever;BIGNUMERIC;Outstanding balance on the first instance where maximum dpd > 60, month-end comparison only
+balance_90dpd_max_ever;BIGNUMERIC;Outstanding balance on the first instance where maximum dpd > 90, month-end comparison only
+balance_xdpd_max_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where maximum dpd > x, daily comparison
+balance_3dpd_max_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where maximum dpd > 3, daily comparison
+balance_7dpd_max_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where maximum dpd > 7, daily comparison
+balance_30dpd_max_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where maximum dpd > 30, daily comparison
+balance_60dpd_max_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where maximum dpd > 60, daily comparison
+balance_90dpd_max_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where maximum dpd > 90, daily comparison
+acct_xdpd_max_ever;INTEGER;Number of account which have maximum dpd > x days historically in EOM position
+acct_3dpd_max_ever;INTEGER;Number of account which have maximum dpd > 3 days historically in EOM position
+acct_7dpd_max_ever;INTEGER;Number of account which have maximum dpd > 7 days historically in EOM position
+acct_30dpd_max_ever;INTEGER;Number of account which have maximum dpd > 30 days historically in EOM position
+acct_60dpd_max_ever;INTEGER;Number of account which have maximum dpd > 60 days historically in EOM position
+acct_90dpd_max_ever;INTEGER;Number of account which have maximum dpd > 90 days historically in EOM position
+acct_xdpd_max_daily_ever;INTEGER;Number of account which have maximum dpd > x days historically in daily position
+acct_3dpd_max_daily_ever;INTEGER;Number of account which have maximum dpd > 3 days historically in daily position
+acct_7dpd_max_daily_ever;INTEGER;Number of account which have maximum dpd > 7 days historically in daily position
+acct_30dpd_max_daily_ever;INTEGER;Number of account which have maximum dpd > 30 days historically in daily position
+acct_60dpd_max_daily_ever;INTEGER;Number of account which have maximum dpd > 60 days historically in daily position
+acct_90dpd_max_daily_ever;INTEGER;Number of account which have maximum dpd > 90 days historically in daily position
+product_group;STRING;Credit Risk Product Grouping, based on FDM product group
+last_collect_active_slik;STRING;Last collect active from SLIK
+loan_offer_risk_bracket;STRING;Risk bracket information derived from loan offer collection
+age_group;STRING;Loan applicant age group
+MOB;INTEGER;Month of Book which counted since disbursed (start_date)
+month_booking;STRING;Month of loan start_date
+risk_group;STRING;Risk group of the loan account
+product_tenure;INTEGER;Product tenure
+product_tenure_type;STRING;Product tenure type
+education;STRING;Loan applicant last education
+province;STRING;Loan applicant province
+start_date_adj;DATE;Start date calculated based on maturity date and product tenure
+month_booking_adj;STRING;Month booking based on start_date_adj
+MOB_adj;INTEGER;MOB based on start_date_adj
+lp_customer_id;STRING;Customer id from LP
+lfs_customer_id;STRING;Customer id from LFS
+balance_xdpd_max;BIGNUMERIC;Outstanding balance where maximum dpd > x, month-end comparison only
+balance_3dpd_max;BIGNUMERIC;Outstanding balance where maximum dpd > 3, month-end comparison only
+balance_7dpd_max;BIGNUMERIC;Outstanding balance where maximum dpd > 7, month-end comparison only
+balance_30dpd_max;BIGNUMERIC;Outstanding balance where maximum dpd > 30, month-end comparison only
+balance_60dpd_max;BIGNUMERIC;Outstanding balance where maximum dpd > 60, month-end comparison only
+balance_90dpd_max;BIGNUMERIC;Outstanding balance where maximum dpd > 90, month-end comparison only
+balance_xdpd_max_daily;BIGNUMERIC;Outstanding balance where maximum dpd > x, daily comparison
+balance_3dpd_max_daily;BIGNUMERIC;Outstanding balance where maximum dpd > 3, daily comparison
+balance_7dpd_max_daily;BIGNUMERIC;Outstanding balance where maximum dpd > 7, daily comparison
+balance_30dpd_max_daily;BIGNUMERIC;Outstanding balance where maximum dpd > 30, daily comparison
+balance_60dpd_max_daily;BIGNUMERIC;Outstanding balance where maximum dpd > 60, daily comparison
+balance_90dpd_max_daily;BIGNUMERIC;Outstanding balance where maximum dpd > 90, daily comparison
+acct_xdpd_max;INTEGER;Number of account which have maximum dpd > x days in EOM position
+acct_3dpd_max;INTEGER;Number of account which have maximum dpd > 3 days in EOM position
+acct_7dpd_max;INTEGER;Number of account which have maximum dpd > 7 days in EOM position
+acct_30dpd_max;INTEGER;Number of account which have maximum dpd > 30 days in EOM position
+acct_60dpd_max;INTEGER;Number of account which have maximum dpd > 60 days in EOM position
+acct_90dpd_max;INTEGER;Number of account which have maximum dpd > 90 days in EOM position
+acct_xdpd_max_daily;INTEGER;Number of account which have maximum dpd > x days in daily position
+acct_3dpd_max_daily;INTEGER;Number of account which have maximum dpd > 3 days in daily position
+acct_7dpd_max_daily;INTEGER;Number of account which have maximum dpd > 7 days in daily position
+acct_30dpd_max_daily;INTEGER;Number of account which have maximum dpd > 30 days in daily position
+acct_60dpd_max_daily;INTEGER;Number of account which have maximum dpd > 60 days in daily position
+acct_90dpd_max_daily;INTEGER;Number of account which have maximum dpd > 90 days in daily position
+outstanding_balance;BIGNUMERIC;The Loan outstanding balance
+balance_xdpd_final;BIGNUMERIC;Outstanding balance where final dpd > x, month-end comparison only
+balance_3dpd_final;BIGNUMERIC;Outstanding balance where final dpd > 3, month-end comparison only
+balance_7dpd_final;BIGNUMERIC;Outstanding balance where final dpd > 7, month-end comparison only
+balance_30dpd_final;BIGNUMERIC;Outstanding balance where final dpd > 30, month-end comparison only
+balance_60dpd_final;BIGNUMERIC;Outstanding balance where final dpd > 60, month-end comparison only
+balance_90dpd_final;BIGNUMERIC;Outstanding balance where final dpd > 90, month-end comparison only
+balance_xdpd_final_ever;BIGNUMERIC;Outstanding balance on the first instance where final dpd > x, month-end comparison only
+balance_3dpd_final_ever;BIGNUMERIC;Outstanding balance on the first instance where final dpd > 3, month-end comparison only
+balance_7dpd_final_ever;BIGNUMERIC;Outstanding balance on the first instance where final dpd > 7, month-end comparison only
+balance_30dpd_final_ever;BIGNUMERIC;Outstanding balance on the first instance where final dpd > 30, month-end comparison only
+balance_60dpd_final_ever;BIGNUMERIC;Outstanding balance on the first instance where final dpd > 60, month-end comparison only
+balance_90dpd_final_ever;BIGNUMERIC;Outstanding balance on the first instance where final dpd > 90, month-end comparison only
+balance_xdpd_final_daily;BIGNUMERIC;Outstanding balance where final dpd > x, daily comparison
+balance_3dpd_final_daily;BIGNUMERIC;Outstanding balance where final dpd > 3, daily comparison
+balance_7dpd_final_daily;BIGNUMERIC;Outstanding balance where final dpd > 7, daily comparison
+balance_30dpd_final_daily;BIGNUMERIC;Outstanding balance where final dpd > 30, daily comparison
+balance_60dpd_final_daily;BIGNUMERIC;Outstanding balance where final dpd > 60, daily comparison
+balance_90dpd_final_daily;BIGNUMERIC;Outstanding balance where final dpd > 90, daily comparison
+balance_xdpd_final_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where final dpd > x, daily comparison
+balance_3dpd_final_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where final dpd > 3, daily comparison
+balance_7dpd_final_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where final dpd > 7, daily comparison
+balance_30dpd_final_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where final dpd > 30, daily comparison
+balance_60dpd_final_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where final dpd > 60, daily comparison
+balance_90dpd_final_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where final dpd > 90, daily comparison
+acct_xdpd_final;INTEGER;Number of account which have final dpd > x days in EOM position
+acct_3dpd_final;INTEGER;Number of account which have final dpd > 3 days in EOM position
+acct_7dpd_final;INTEGER;Number of account which have final dpd > 7 days in EOM position
+acct_30dpd_final;INTEGER;Number of account which have final dpd > 30 days in EOM position
+acct_60dpd_final;INTEGER;Number of account which have final dpd > 60 days in EOM position
+acct_90dpd_final;INTEGER;Number of account which have final dpd > 90 days in EOM position
+acct_xdpd_final_ever;INTEGER;Number of account which have final dpd > x days historically in EOM position
+acct_3dpd_final_ever;INTEGER;Number of account which have final dpd > 3 days historically in EOM position
+acct_7dpd_final_ever;INTEGER;Number of account which have final dpd > 7 days historically in EOM position
+acct_30dpd_final_ever;INTEGER;Number of account which have final dpd > 30 days historically in EOM position
+acct_60dpd_final_ever;INTEGER;Number of account which have final dpd > 60 days historically in EOM position
+acct_90dpd_final_ever;INTEGER;Number of account which have final dpd > 90 days historically in EOM position
+acct_xdpd_final_daily;INTEGER;Number of account which have final dpd > x days in daily position
+acct_3dpd_final_daily;INTEGER;Number of account which have final dpd > 3 days in daily position
+acct_7dpd_final_daily;INTEGER;Number of account which have final dpd > 7 days in daily position
+acct_30dpd_final_daily;INTEGER;Number of account which have final dpd > 30 days in daily position
+acct_60dpd_final_daily;INTEGER;Number of account which have final dpd > 60 days in daily position
+acct_90dpd_final_daily;INTEGER;Number of account which have final dpd > 90 days in daily position
+acct_xdpd_final_daily_ever;INTEGER;Number of account which have final dpd > x days historically in daily position
+acct_3dpd_final_daily_ever;INTEGER;Number of account which have final dpd > 3 days historically in daily position
+acct_7dpd_final_daily_ever;INTEGER;Number of account which have final dpd > 7 days historically in daily position
+acct_30dpd_final_daily_ever;INTEGER;Number of account which have final dpd > 30 days historically in daily position
+acct_60dpd_final_daily_ever;INTEGER;Number of account which have final dpd > 60 days historically in daily position
+acct_90dpd_final_daily_ever;INTEGER;Number of account which have final dpd > 90 days historically in daily position
+balance_10dpd_max_ever;BIGNUMERIC;Outstanding balance on the first instance where maximum dpd > 10, month-end comparison only
+balance_15dpd_max_ever;BIGNUMERIC;Outstanding balance on the first instance where maximum dpd > 15, month-end comparison only
+balance_10dpd_max_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where maximum dpd > 10, daily comparison
+balance_15dpd_max_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where maximum dpd > 15, daily comparison
+balance_10dpd_max;BIGNUMERIC;Outstanding balance where maximum dpd > 10, month-end comparison only
+balance_15dpd_max;BIGNUMERIC;Outstanding balance where maximum dpd > 15, month-end comparison only
+balance_10dpd_max_daily;BIGNUMERIC;Outstanding balance where maximum dpd > 10, daily comparison
+balance_15dpd_max_daily;BIGNUMERIC;Outstanding balance where maximum dpd > 15, daily comparison
+balance_10dpd_final;BIGNUMERIC;Outstanding balance where final dpd > 10, month-end comparison only
+balance_15dpd_final;BIGNUMERIC;Outstanding balance where final dpd > 15, month-end comparison only
+balance_10dpd_final_ever;BIGNUMERIC;Outstanding balance on the first instance where final dpd > 10, month-end comparison only
+balance_15dpd_final_ever;BIGNUMERIC;Outstanding balance on the first instance where final dpd > 15, month-end comparison only
+balance_10dpd_final_daily;BIGNUMERIC;Outstanding balance where final dpd > 10, daily comparison
+balance_15dpd_final_daily;BIGNUMERIC;Outstanding balance where final dpd > 15, daily comparison
+balance_10dpd_final_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where final dpd > 10, daily comparison
+balance_15dpd_final_daily_ever;BIGNUMERIC;Outstanding balance on the first instance where final dpd > 15, daily comparison
+acct_10dpd_max_ever;INTEGER;Number of account which have maximum dpd > 10 days historically in EOM position
+acct_15dpd_max_ever;INTEGER;Number of account which have maximum dpd > 15 days historically in EOM position
+acct_10dpd_max_daily_ever;INTEGER;Number of account which have maximum dpd > 10 days historically in daily position
+acct_15dpd_max_daily_ever;INTEGER;Number of account which have maximum dpd > 15 days historically in daily position
+acct_10dpd_max;INTEGER;Number of account which have maximum dpd > 10 days in EOM position
+acct_15dpd_max;INTEGER;Number of account which have maximum dpd > 15 days in EOM position
+acct_10dpd_max_daily;INTEGER;Number of account which have maximum dpd > 10 days in daily position
+acct_15dpd_max_daily;INTEGER;Number of account which have maximum dpd > 15 days in daily position
+acct_10dpd_final;INTEGER;Number of account which have final dpd > 10 days in EOM position
+acct_15dpd_final;INTEGER;Number of account which have final dpd > 15 days in EOM position
+acct_10dpd_final_ever;INTEGER;Number of account which have final dpd > 10 days historically in EOM position
+acct_15dpd_final_ever;INTEGER;Number of account which have final dpd > 15 days historically in EOM position
+acct_10dpd_final_daily;INTEGER;Number of account which have final dpd > 10 days in daily position
+acct_15dpd_final_daily;INTEGER;Number of account which have final dpd > 15 days in daily position
+acct_10dpd_final_daily_ever;INTEGER;Number of account which have final dpd > 10 days historically in daily position
+acct_15dpd_final_daily_ever;INTEGER;Number of account which have final dpd > 15 days historically in daily position
+plafond_facility;BIGNUMERIC;Plafond of the loan facility
+flag_straight_flow;INTEGER;Flag for customer who unpaid loan from begining
+facility_start_date;DATE;The start date of the loan facility
+first_due_date;DATE;The first due date
+facility_maturity_date;DATE;The maturity date of the loan facility
+MOB_facility;INTEGER;MOB of the loan facility
+plafond_awal_facility;BIGNUMERIC;Plafond awal of the loan facility
+flag_new_repeat_v1;STRING;Flag loan is NEW or REPEAT per CIF (version 1). NEW if the loan start_date_adj is in 30 days from earliest start_date_adj
+flag_new_repeat_v2;STRING;Flag loan is NEW or REPEAT per CIF (version 2). NEW if the loan having earliest start_date
+id_number;STRING;Customer identification number

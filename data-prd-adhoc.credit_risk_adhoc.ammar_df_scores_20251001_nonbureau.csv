@@ -1,0 +1,25 @@
+field name;mode;type;description
+primary_key;NULLABLE;STRING;
+flag_takeup;NULLABLE;INTEGER;
+split_tagging;NULLABLE;STRING;
+scores;NULLABLE;FLOAT;
+scores_bin;NULLABLE;INTEGER;
+fundingbalance_active_min_1month;NULLABLE;FLOAT;
+devicemanufacture_latest;NULLABLE;FLOAT;
+fundingbalance_active_avg_12months;NULLABLE;FLOAT;
+fundingbalance_active_min_3months;NULLABLE;FLOAT;
+fundingbalance_active_gpt_max_12months;NULLABLE;FLOAT;
+dailyeventdays_allevent_11pmto5am_count_6months;NULLABLE;FLOAT;
+transactionamt_interbanktransfer_in_pct25_12months;NULLABLE;FLOAT;
+transactionamt_gpt_in_pct25_12months;NULLABLE;FLOAT;
+dailytransaction_interpocketactivity_max_12months;NULLABLE;FLOAT;
+fundingbalance_active_mainsaving_min_1month;NULLABLE;FLOAT;
+dailyevent_transactions_sum_6months_over_dailyevent_allevent_sum_6months;NULLABLE;FLOAT;
+dailytransaction_topupwallet_avg_12months;NULLABLE;FLOAT;
+adbdiff_active_gpt_12months;NULLABLE;FLOAT;
+transactionamt_interpocketactivity_pct25_12months;NULLABLE;FLOAT;
+adbdiff_active_12months;NULLABLE;FLOAT;
+adbdiff_active_3months;NULLABLE;FLOAT;
+fundingbalance_active_min_12months;NULLABLE;FLOAT;
+adbdiff_active_6months;NULLABLE;FLOAT;
+adbdiff_active_mainsaving_12months;NULLABLE;FLOAT;

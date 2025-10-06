@@ -1,0 +1,79 @@
+field name;type;description
+BusinessDate;DATE;Business date when the record start to changed/added.
+Status;STRING;The status of the loan account
+Branch;STRING;System unique identifier from the branch table related to the loan account
+AccountType;STRING;The account type for the loan account
+CIF;STRING;Customer CIF associated with the loan account from customer_table
+Sequence;STRING;The loan sequence number
+AccountName;STRING;The name of the customer who gets the loan facility
+AOCode;STRING;Account officer code identifier who takes care of the financial bookkeeping and records of the loan account.
+FacilityRef;STRING;Facility reference number
+DealRef;STRING;Loan deal reference number
+DealType;STRING;The code of the deal type
+Ccy;STRING;3-digit currency code
+PlafondAwal;NUMERIC;The initial loan amount that is given to the customer
+Plafond;BIGNUMERIC;Current maximum loan amount that is given to the customer
+Outstanding;BIGNUMERIC;Outstanding balance amount of the loan account
+StartDate;DATE;Date when this account was last approved or started
+MaturityDate;DATE;Date when this account was matured
+ClosedDate;DATE;Date when this account was closed
+NomorPKAwal;STRING;Initial agreement number for the loan account
+NomorPKPerpanjangan;STRING;Renewal agreement number for the loan account
+TanggalPKPerpanjangan;DATE;Renewal agreement date for the loan account
+FrekuensiPerpanjangan;NUMERIC;Loan renewal frequency
+TanggalMulaiPKPerpanjangan;DATE;Renewal agreement starting date
+TanggalAkhirPKPerpanjangan;DATE;Renewal agreement ending date
+NilaiProyek;BIGNUMERIC;Project Amount
+KategoriDebitur;STRING;Category of the Debtor based on Regulatory definition
+KategoriPortfolio;STRING;Category of Portfolio based on Regulatory definition
+KategoriPengukuran;STRING;Category of Measurement Methods based on Regulatory definition
+JenisKredit;STRING;Loan Type based on Regulatory definition
+SifatKredit;STRING;Loan Characteristic based on Regulatory definition
+GolonganKredit;STRING;Loan Category based on Regulatory definition
+JenisPenggunaan;STRING;Loan Usage Type based on Regulatory definition
+OrientasiPenggunaan;STRING;Loan Usage Orientation based on Regulatory definition
+SektorEkonomi;STRING;Economic Sector based on Regulatory definition
+LokasiProyek;STRING;Project Location
+JenisSukuBunga;STRING;Loan Interest Type based on Regulatory definition
+isUncommited;STRING;Flag indicating whether the loan account is uncommitted/committed
+SegmenDebitur;STRING;The Code for Debtor Segment
+Kelompok;STRING;Loan Group code
+GroupNasabah;STRING;Customers Loan Group code
+InfoPerpanjangan;STRING;Notes about the loan account (renewal)
+KreditProgramPemerintah;STRING;Indicate whether this line of credit is part of Government Lending Program or not
+TakeOver;STRING;Loan take over code
+SumberDana;STRING;Loan payment source of funds
+TanggalMacet;DATE;Date when the loan is in default
+SebabMacet;STRING;Reason code if the loan was in default
+FrekuensiTunggak;BIGNUMERIC;Loan default frequency
+FrekuensiRestruktur;INTEGER;Loan restructure frequency
+TanggalRestrukturAwal;DATE;Initial loan restructure date
+TanggalRestrukturAkhir;DATE;Latest loan restructure date
+CaraRestruktur;STRING;Loan restructure code
+KodeKondisi;STRING;Loan latest condition code
+TanggalKondisi;DATE;Date when the loan condition checked
+Keterangan;STRING;Notes about the loan
+AlasanTutup;STRING;Loan close reason
+SourceSystem;STRING;Name of the source system where the loan is created
+UnusedAmount;BIGNUMERIC;Unused facility amount
+SkimPembiayaanSyariah;STRING;SHARIA - Sharia Financing Scheme
+JenisAkad;STRING;SHARIA - Contract type
+KarakteristikSumberDana;STRING;SHARIA - Source of funds characteristic
+SifatInvestasi;STRING;SHARIA - Invesment Type
+MetodeBagiHasil;STRING;SHARIA - Profit Sharing Method
+PersentaseNisbah;BIGNUMERIC;SHARIA - Percentage of Profit
+RasioRbhPbh;BIGNUMERIC;SHARIA - Ratio of RBH (Realisasi Bagi Hasil, i.e. Profit Sharing Realization) and PBH (Proyeksi Bagi Hasil, i.e. Profit Sharing Projection)
+JenisAset;STRING;SHARIA - Type of Asset
+WaktuPerolehanAset;DATE;SHARIA - Asset Acquisition Time
+JenisValutaAset;STRING;SHARIA - Asset Currency Type
+HargaPerolehanAset;BIGNUMERIC;SHARIA - Asset Acquisition Amount
+JmlPeriodePenyusutan;INTEGER;SHARIA - Number of Depreciation Period
+PeriodePembayaranSewa;STRING;SHARIA - Lease Period Unit
+NilaisewaperPeriode;BIGNUMERIC;SHARIA - Lease Amount Per Period
+AkumPenyusutan;BIGNUMERIC;SHARIA - Accumulated Depreciation
+CkpnIjarah;BIGNUMERIC;SHARIA - CKPN Ijarah
+UangMukaIjarah;BIGNUMERIC;SHARIA - Advance Money Ijarah
+PersentaseImbalanAwalKontrak;BIGNUMERIC;SHARIA - Initial Profit Sharing Percentange
+SaldoHargaPokok;BIGNUMERIC;SHARIA - Principal Balance
+SaldoMarginDitangguhkan;BIGNUMERIC;SHARIA - Interest Spread
+TunggakanMargin;BIGNUMERIC;SHARIA - Interest Due

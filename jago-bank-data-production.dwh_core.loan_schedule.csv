@@ -1,0 +1,24 @@
+field name;type;description
+loan_schedule_source;STRING;Name of source system, can be one of LP, WINCORE, or OLIBS724
+origination_system;STRING;Name of the origination system that indicates which system registered the data into the core banking platform. Possible values include 'LP' and 'WINCORE'.
+core_banking_system;STRING;Name of the core banking system that indicates the core banking platform used to process core banking operations. Possible values include 'MAMBU' and 'WINCORE'
+event_id;BYTES;
+content_id;BYTES;
+loan_schedule_id;STRING;Unique ID of payment schedule for each loan_account, as example from Wincore, it may comes from combination between loan number and schedule date
+loan_account_id;STRING;ID of Loan account
+schedule_date;DATE;Pre-Agreed installment payment date for each loan_account_id to pay of loan installment(s) to Bank Jago
+last_payment_date;DATE;The actual transaction date of the payment, differentiate by its schedule_type and installment number(s) stored at schedule_sequence
+has_paid;BOOLEAN;Flag to identify if this installment and schedule type has been paid by customer
+currency;STRING;The ISO code of money currency amount performed for related schedule, at the moment the default value is IDR
+schedule_type;STRING;Type of schedule amount, differentiate by its amount types, such as Principal, Interest, and/or Penalty (if it is overdue). The code may vary for each loan_schedule_source
+schedule_sequence;STRING;The sequential number until the maximum loan tenure agreed
+amount_received;NUMERIC;Actual paid/received amount for this schedule
+settlement_amount;NUMERIC;The amount received by bank
+installment_total_balance;NUMERIC;The installment credit limit for particular schedule sequence number/loan schedule date. Only applicable for term loan (installment-based loan) Note: This field is not applicable for revolving loan.
+loan_schedule_event_at;TIMESTAMP;Event timestamp of the original source
+loan_schedule_deleted;BOOLEAN;Flag indicating if the event is the deletion of the entity
+loan_schedule_inserted_by;STRING;The identifier of the process, system or person who inserted the row to the table
+loan_schedule_inserted_at;TIMESTAMP;The system timestamp when the row was inserted
+schedule_sub_type;STRING;Subtype of schedule amount type
+amount_to_paid;NUMERIC;Amount to be paid as schedule
+business_date;DATE;

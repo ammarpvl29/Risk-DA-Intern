@@ -1,0 +1,38 @@
+field name;type;description
+loan_offer_source;STRING;
+business_date;DATE;The date that represent the records state at the end of the day
+loan_offer_id;STRING;Unique ID the loan offer
+event_id;BYTES;Event id that is being generated using DBT Surrogate Key on top of the key of the table
+base_event_id;STRING;The parent's event id that is being recorded in the upstream table. We need this because we are trying to ingest nested data inside an event.
+customer_id;STRING;Customer ID
+offer_type;STRING;Type of the offer
+offer_status;STRING;Status of the offer
+product_code;STRING;Product code
+overdraft_interest_rate;NUMERIC;Overdraft interest rate
+overdraft_initial_facility_expires_at;TIMESTAMP;Overdraft initial facility expires at
+overdraft_initial_facility_limit;STRING;Overdraft initial facility limit
+overdraft_initial_facility_active_period;STRING;Overdraft Initial Facility Active Period
+installment_min_tenor;NUMERIC;Installment min tenor
+installment_max_tenor;NUMERIC;Installment max tenor
+installment_monthly_flat_rate;NUMERIC;Installment monthly flat rate
+installment_initial_facility_expires_at;TIMESTAMP;Installment facility expires at
+installment_initial_facility_limit;STRING;Installment facility limit
+installment_initial_facility_active_period;STRING;Installment Initial Facility Active Period
+last_usage_at;TIMESTAMP;Last Usage At
+agreement_version;STRING;Agreement version
+agreement_agreed_at;TIMESTAMP;Agreement agreed at
+agreement_document;STRING;Agreement document link
+agreement_document_no;STRING;Agreement document number
+agreement_stamping_external_id;STRING;Agreement stamping external_id
+agreement_stamping_status;STRING;Agreement stamping status
+risk_bracket;STRING;Risk bracket
+kyc_session_id;STRING;indicating the BLOCKED status due to failed KYC
+monthly_repayment_ability;NUMERIC;identify customer’s ability to repay at the end of the month
+version;NUMERIC;Version
+class;STRING;Class
+expires_at;TIMESTAMP;Timestamp that indicate when the offer will be expired
+created_at;TIMESTAMP;Timestamp that indicate when the records is being created at the original DB
+updated_at;TIMESTAMP;Timestamp that indicate when the records is being updated at the original DB
+loan_offer_deleted;BOOLEAN;Flag indicating if the event is the deletion of the entity
+loan_offer_inserted_by;STRING;
+loan_offer_inserted_at;TIMESTAMP;The system timestamp when the row was inserted
