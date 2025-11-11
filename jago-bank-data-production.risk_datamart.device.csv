@@ -1,0 +1,341 @@
+field name;type;description
+business_date;DATE;The date that represent the records state at the end of the day
+customer_id;STRING;Customer identifier.
+external_id;STRING;External identifier.
+score;NUMERIC;Score of the loan application.
+result;STRING;Result of the loan application.
+count_accept;INTEGER;Number of ACCEPT results for the customer and external ID on the business date.
+count_review;INTEGER;Number of REVIEW results for the customer and external ID on the business date.
+count_decline;INTEGER;Number of DECLINE results for the customer and external ID on the business date.
+count_custom_rule_installed_virtual_positioning;INTEGER;Count of instances where custom rule for installed virtual positioning was triggered.
+count_installed_proxy_tool;INTEGER;Count of instances where proxy tool installation was detected.
+count_custom_rule_android_ios_device_vpn_detected;INTEGER;Count of instances where custom rule for VPN detection on Android/iOS was triggered.
+count_android_ios_vpn_http_detected;INTEGER;Count of instances where VPN HTTP usage was detected on Android/iOS.
+count_email_label_similarity;INTEGER;Count of instances where email label similarity was detected.
+count_is_custom_policy;INTEGER;Count of instances where custom policy was applied.
+count_installed_virtual_positioning;INTEGER;Count of instances where virtual positioning tools were found installed.
+count_android_ios_device_vpn_detected;INTEGER;Count of instances where VPN was detected on Android/iOS device.
+count_profile_company_phone_check_result;INTEGER;Count of instances where company phone check was performed.
+count_custom_rule_installed_quick_macro;INTEGER;Count of instances where custom rule for installed quick macro was triggered.
+count_custom_rule_android_device_adb_link;INTEGER;Count of instances where custom rule for Android ADB link was triggered.
+count_custom_rule_installed_multiopen_tool;INTEGER;Count of instances where custom rule for installed multi-open tools was triggered.
+count_installed_quick_macro;INTEGER;Count of instances where quick macro tools were found installed.
+count_multi_packagename_associated_with_apply_info_in_3m_loan_all;INTEGER;Count of multiple package names associated with application info in 3 months across all loans.
+count_multi_platform_associated_with_apply_info_in_1m_loan_all;INTEGER;Count of multiple platforms associated with application info in 1 month across all loans.
+count_multi_packagename_associated_with_apply_info_in_1m_loan_all;INTEGER;Count of multiple package names associated with application info in 1 month across all loans.
+count_multi_platform_associated_with_apply_info_in_3m_loan_all;INTEGER;Count of multiple platforms associated with application info in 3 months across all loans.
+count_loan_reject_in_1d;INTEGER;Count of loan rejections within 1 day.
+count_idVerification_failed;INTEGER;Count of failed ID verification attempts.
+count_custom_rule_android_ios_device_no_sim;INTEGER;Count of instances where custom rule for Android/iOS devices with no SIM was triggered.
+count_medium_risk_device;INTEGER;Count of instances where device was classified as medium risk.
+count_android_ios_device_gps_fake;INTEGER;Count of instances where fake GPS was detected on Android/iOS devices.
+count_email_label_suspicious_domain;INTEGER;Count of instances where email domain was flagged as suspicious.
+count_device_charging_abnormality;INTEGER;Count of instances where device charging behavior was abnormal.
+count_email_label_random;INTEGER;Count of instances where email label was flagged as randomly generated.
+count_installed_multiopen_tool;INTEGER;Count of instances where multi-open tools were found installed.
+count_android_device_adb_link;INTEGER;Count of instances where Android device had ADB link enabled.
+count_android_ios_device_short_uptime;INTEGER;Count of instances where Android/iOS device had suspiciously short uptime.
+count_custom_rule_running_multiopen_tool;INTEGER;Count of instances where custom rule for running multi-open tools was triggered.
+count_custom_rule_android_device_multiple_running;INTEGER;Count of instances where custom rule for multiple running processes on Android was triggered.
+count_multi_platform_associated_with_apply_info_in_7d_loan_all;INTEGER;Count of multiple platforms associated with application info in 7 days across all loans.
+count_multi_packagename_associated_with_apply_info_in_7d_loan_all;INTEGER;Count of multiple package names associated with application info in 7 days across all loans.
+count_running_multiopen_tool;INTEGER;Count of instances where multi-open tools were found running.
+count_android_device_multiple_running;INTEGER;Count of instances where multiple suspicious processes were running on Android device.
+count_android_device_activetime_uptime_abnormality;INTEGER;Count of instances where Android device active time to uptime ratio was abnormal.
+count_custom_rule_android_ios_device_gps_fake;INTEGER;Count of instances where custom rule for fake GPS on Android/iOS was triggered.
+count_multi_platform_associated_with_apply_info_in_14d_loan_all;INTEGER;Count of multiple platforms associated with application info in 14 days across all loans.
+count_device_year_2018;INTEGER;Count of instances where device manufacture year was identified as 2018.
+count_multi_partnercode_associated_with_loan_info_in_3h_loan_all;INTEGER;Count of multiple partner codes associated with loan info in 3 hours across all loans.
+count_multi_platform_associated_with_apply_info_in_3d_loan_all;INTEGER;Count of multiple platforms associated with application info in 3 days across all loans.
+count_multi_packagename_associated_with_apply_info_in_3d_loan_all;INTEGER;Count of multiple package names associated with application info in 3 days across all loans.
+count_android_device_rom_risk;INTEGER;Count of instances where Android device ROM was identified as risky.
+count_device_year_2019;INTEGER;Count of instances where device manufacture year was identified as 2019.
+count_multi_loan_info_associated_with_device_in_3d_loan_all;INTEGER;Count of multiple loan information associated with the device in 3 days across all loans.
+count_multi_partnercode_associated_with_risk_device_in_3d;INTEGER;Count of multiple partner codes associated with risk device in 3 days.
+count_custom_rule_multi_partnercode_associated_with_risk_device_in_3d;INTEGER;Count of instances where custom rule for multiple partner codes with risk device in 3 days was triggered.
+count_android_ios_device_no_sim;INTEGER;Count of instances where Android/iOS device had no SIM card installed.
+count_multi_platform_associated_with_cm3m_in_3m_loan_all;INTEGER;Count of multiple platforms associated with credit model 3m in 3 months across all loans.
+count_multi_apply_info_associated_with_cm3m_in_1m_loan_all;INTEGER;Count of multiple application info associated with credit model 3m in 1 month across all loans.
+count_black_box_demoted;INTEGER;Count of instances where black box risk score was demoted.
+count_custom_rule_android_ios_device_proxy_detected;INTEGER;Count of instances where custom rule for proxy detection on Android/iOS was triggered.
+count_android_ios_device_proxy_detected;INTEGER;Count of instances where proxy was detected on Android/iOS devices.
+count_email_label_not_in_format;INTEGER;Count of instances where email was flagged for format irregularity.
+count_custom_rule_multi_loan_info_associated_with_device_in_1d_loan_all;INTEGER;Count of instances where custom rule for multiple loan information associated with device in 1 day across all loans was triggered.
+count_custom_rule_multi_loan_info_associated_with_mobile_in_1d_loan_all;INTEGER;Count of instances where custom rule for multiple loan information associated with mobile in 1 day across all loans was triggered.
+count_custom_rule_multi_loan_info_associated_with_email_in_1d_loan_all;INTEGER;Count of instances where custom rule for multiple loan information associated with email in 1 day across all loans was triggered.
+count_custom_rule_multi_loan_info_associated_with_idnum_in_1d_loan_all;INTEGER;Count of instances where custom rule for multiple loan information associated with ID number in 1 day across all loans was triggered.
+count_unusual_device_loan;INTEGER;Count of instances where unusual patterns in device loan behavior were detected.
+count_custom_rule_unusual_device_loan_new;INTEGER;Count of instances where custom rule for new unusual device loan patterns was triggered.
+count_multi_similar_emails_associated_with_device_in_1d_all;INTEGER;Count of multiple similar email addresses associated with the same device within 1 day.
+count_installed_VirtualApp;INTEGER;Count of instances where virtual applications were found installed on the device.
+count_running_VirtualApp;INTEGER;Count of instances where virtual applications were found running on the device.
+count_android_ios_device_info_tampered;INTEGER;Count of instances where device information on Android/iOS was detected as tampered with.
+count_device_year_2016;INTEGER;Count of instances where device manufacture year was identified as 2016.
+count_high_risk_device;INTEGER;Count of instances where device was classified as high risk.
+count_multi_loan_info_associated_with_mobile_in_1d_loan_all;INTEGER;Count of multiple loan information associated with the same mobile number in 1 day across all loans.
+count_multi_loan_info_associated_with_email_in_1d_loan_all;INTEGER;Count of multiple loan information associated with the same email in 1 day across all loans.
+count_multi_loan_info_associated_with_idnum_in_1d_loan_all;INTEGER;Count of multiple loan information associated with the same ID number in 1 day across all loans.
+count_multi_loan_info_associated_with_device_in_1m_loan_all;INTEGER;Count of multiple loan information associated with the same device in 1 month across all loans.
+count_multi_loan_info_associated_with_mobile_in_1m_loan_all;INTEGER;Count of multiple loan information associated with the same mobile number in 1 month across all loans.
+count_multi_loan_info_associated_with_email_in_1m_loan_all;INTEGER;Count of multiple loan information associated with the same email in 1 month across all loans.
+count_multi_loan_info_associated_with_idnum_in_1m_loan_all;INTEGER;Count of multiple loan information associated with the same ID number in 1 month across all loans.
+count_custom_rule_multi_platform_associated_with_apply_info_in_1d_loan_all;INTEGER;Count of instances where custom rule for multiple platforms associated with application info in 1 day across all loans was triggered.
+count_custom_rule_multi_partnercode_associated_with_risk_device_in_1d;INTEGER;Count of instances where custom rule for multiple partner codes associated with risk device in 1 day was triggered.
+count_custom_rule_multi_partnercode_associated_with_loan_info_in_3h_loan_all;INTEGER;Count of instances where custom rule for multiple partner codes associated with loan info in 3 hours across all loans was triggered.
+count_custom_rule_multi_packagename_associated_with_apply_info_in_1d_loan_all;INTEGER;Count of instances where custom rule for multiple package names associated with application info in 1 day across all loans was triggered.
+count_multi_loan_info_in_1d;INTEGER;Count of multiple loan information within 1 day.
+count_multi_partnercode_associated_with_risk_idnumber_in_3d;INTEGER;Count of multiple partner codes associated with risk ID number in 3 days.
+count_multi_platform_associated_with_apply_info_in_1d_loan_all;INTEGER;Count of multiple platforms associated with application info in 1 day across all loans.
+count_multi_packagename_associated_with_apply_info_in_1d_loan_all;INTEGER;Count of multiple package names associated with application info in 1 day across all loans.
+count_multi_loan_info_associated_with_idnum_in_3d_loan_all;INTEGER;Count of multiple loan information associated with the same ID number in 3 days across all loans.
+count_custom_rule_multi_partnercode_associated_with_risk_idnumber_in_1d;INTEGER;Count of instances where custom rule for multiple partner codes associated with risk ID number in 1 day was triggered.
+count_custom_rule_running_quick_macro;INTEGER;Count of instances where custom rule for running quick macro was triggered.
+count_groupblacklist_idnumber;INTEGER;Count of instances where ID number was found in group blacklist.
+count_device_year_less_than_2016;INTEGER;Count of instances where device manufacture year was identified as earlier than 2016.
+count_running_quick_macro;INTEGER;Count of instances where quick macro tools were found running.
+count_multi_loan_info_associated_with_mobile_in_3m_loan_all;INTEGER;Count of multiple loan information associated with the same mobile number in 3 months across all loans.
+count_email_label_temporariness;INTEGER;Count of instances where email was flagged as temporary or short-lived.
+count_multi_packagename_associated_with_apply_info_in_14d_loan_all;INTEGER;Count of multiple package names associated with application info in 14 days across all loans.
+count_multi_loan_info_associated_with_idnum_in_3m_loan_all;INTEGER;Count of multiple loan information associated with the same ID number in 3 months across all loans.
+count_multi_partnercode_associated_with_loan_info_in_1d_login;INTEGER;Count of multiple partner codes associated with loan info in 1 day for login.
+count_custom_rule_multi_partnercode_associated_with_risk_idnumber_in_3d;INTEGER;Count of instances where custom rule for multiple partner codes associated with risk ID number in 3 days was triggered.
+count_multi_loan_info_associated_with_device_in_3m_loan_all;INTEGER;Count of multiple loan information associated with the same device in 3 months across all loans.
+count_device_year_2017;INTEGER;Count of instances where device manufacture year was identified as 2017.
+count_device_installpackages_many_gaming_apps;INTEGER;Count of instances where device has an unusually high number of gaming applications installed.
+count_android_device_adblink_vpn_gps_fake;INTEGER;Count of instances where Android device had ADB link, VPN and GPS fake detected simultaneously.
+count_login_reject_in_1d;INTEGER;Count of instances where login was rejected within 1 day.
+count_black_idnumber;INTEGER;Count of blacklisted ID numbers.
+count_installed_hook_tool;INTEGER;Count of installed hook tools.
+count_installed_crowdsourcing_app;INTEGER;Count of installed crowdsourcing apps.
+count_multi_platform_associated_with_cm3m_in_1m_loan_all;INTEGER;Count of multiple platforms associated with CM3M in 1 month across all loans.
+count_groupblacklist_deviceId;INTEGER;Count of group blacklist device IDs.
+count_multi_loan_info_associated_with_email_in_14d_loan_all;INTEGER;Count of multiple loan info associated with email in 14 days across all loans.
+count_multi_partnercode_associated_with_loan_info_in_1d_register;INTEGER;Count of multiple partner codes associated with loan info in 1 day during registration.
+count_device_installpackages_many_financial_apps;INTEGER;Count of devices with many financial apps installed.
+count_multi_ipcity_associated_with_loan_info_in_7d;INTEGER;Count of multiple IP cities associated with loan info in 7 days.
+count_multi_platform_associated_with_cm3m_in_14d_loan_all;INTEGER;Count of multiple platforms associated with CM3M in 14 days across all loans.
+count_android_ios_device_hook_tool_detected;INTEGER;Count of Android/IOS devices with hook tools detected.
+count_idv_reject_in_1d;INTEGER;Count of IDV rejections in 1 day.
+count_multi_loan_info_associated_with_email_in_3m_loan_all;INTEGER;Count of multiple loan info associated with email in 3 months across all loans.
+count_device_installpackages_non_common_apps;INTEGER;Count of devices with non-common apps installed.
+count_android_device_root;INTEGER;Count of Android devices with root access.
+count_groupblacklist_mobile;INTEGER;Count of group blacklist mobiles.
+count_ios_device_activetime_uptime_abnormality;INTEGER;Count of iOS devices with abnormal active time/uptime.
+count_multi_loan_info_associated_with_email_in_7d_loan_all;INTEGER;Count of Multi-loan info associated with email in 7 days.
+count_multi_loan_info_associated_with_idnum_in_7d_loan_all;INTEGER;Count of Multi-loan info associated with ID number in 7 days.
+count_multi_loan_info_associated_with_mobile_in_7d_loan_all;INTEGER;Count of Multi-loan info associated with mobile in 7 days.
+count_multi_loan_info_associated_with_device_in_1d_loan_all;INTEGER;Count of Multi-loan info associated with device in 1 day.
+count_register_reject_in_1d;INTEGER;Count of Register reject in 1 day.
+count_multi_partnercode_associated_with_risk_mobile_in_1d;INTEGER;Count of Multi-partnercode associated with risk mobile in 1d.
+count_multi_partnercode_associated_with_loan_info_in_1d_idv;INTEGER;Count of Multi-partner code associated with loan info in 1 day.
+count_custom_rule_installed_crowdsourcing_app;INTEGER;Count of Custom rule installed crowdsourcing apps.
+count_multi_distance_associated_with_loan_info_in_1h;INTEGER;Count of Multi-distance associated with loan info in 1 hour.
+count_multi_loan_info_associated_with_mobile_in_14d_loan_all;INTEGER;Count of Multi-loan info associated with mobile in 14d loan all.
+count_multi_partnercode_associated_with_risk_idnumber_in_1d;INTEGER;Count of Multi-partner code associated with risk idnumber in 1 day.
+count_multi_loan_info_associated_with_device_in_14d_loan_all;INTEGER;Count of Multi-loan info associated with device in 14d loan all.
+count_multi_loan_info_associated_with_mobile_in_3d_loan_all;INTEGER;Count of Multi-loan info associated with mobile in 3d loan all.
+count_black_mobile;INTEGER;Count of blacklisted mobiles.
+count_profileCompanyPhoneCheckResult;INTEGER;Count of profile company phone check result.
+count_device_uptime_totalspace_register_abnormality;INTEGER;Count of device uptime and total space register abnormality.
+count_device_usedspace_nosim_abnormality;INTEGER;Count of device used space and no SIM abnormality.
+count_multi_loan_info_associated_with_device_in_7d_loan_all;INTEGER;Count of Multi-loan info associated with device in 7d loan all.
+count_device_change_languages;INTEGER;Count of device language changes.
+count_android_device_suspected_reset;INTEGER;Count of Android device suspected reset.
+count_custom_rule_multi_partnercode_associated_with_loan_info_in_1d_register;INTEGER;Count of custom rule multi-partnercode associated with loan info in 1 day.
+count_multi_loan_info_associated_with_email_in_3d_loan_all;INTEGER;Count of Multi-loan info associated with email in 3d loan all.
+count_installed_group_control_tool;INTEGER;Count of installed group control tools.
+count_disburse_reject_in_1d;INTEGER;Count of disburse rejections in 1 day.
+count_blacklist;INTEGER;Count of blacklisted devices.
+count_android_ios_device_suspected_of_wiping_phone;INTEGER;Count of suspected device wiping.
+count_custom_rule_multi_partnercode_associated_with_loan_info_in_1d_login;INTEGER;Count of Multi-partnercode associated with loan info in 1d login.
+count_running_hookaddress;INTEGER;Count of running hook address.
+count_unusual_device_loan_new;INTEGER;Count of unusual device loan new.
+count_multi_loan_info_associated_with_idnum_in_14d_loan_all;INTEGER;Count of Multi-loan info associated with ID number in 14d loan all.
+count_device_installpackages_insufficient_number_of_apps;INTEGER;Count of insufficient number of apps in 1 day.
+count_multi_partnercode_associated_with_loan_info_in_1d;INTEGER;Count of Multi-partnercode associated with loan info in 1d.
+count_multi_partnercode_associated_with_risk_device_in_1d;INTEGER;Count of Multi-partnercode associated with risk device in 1d.
+count_android_root_detected;INTEGER;Count of Android root detected in 1 day.
+count_groupblacklist;INTEGER;Count of IDV rejections in 1 day.
+count_multi_apply_info_associated_with_cm3m_in_3m_loan_all;INTEGER;Count of Multi-apply info associated with CM3M in 3m loan all.
+count_android_ios_device_abnormal_time;INTEGER;Count of Android/IOS devices with abnormal time.
+count_multi_partnercode_associated_with_risk_mobile_in_3d;INTEGER;Count of Multi-partnercode associated with risk mobile in 3d.
+count_black_deviceId;INTEGER;Count of blacklisted device IDs.
+version;NUMERIC;Customer device checking version.
+_class;STRING;Class name of fraud check application.
+info_detail_app_version;STRING;Application version.
+info_detail_available_memory;NUMERIC;Available memory size in bytes.
+info_detail_available_storage;NUMERIC;Available storage size in bytes.
+info_detail_battery_level;NUMERIC;Battery level in the range of 0 to 100.
+info_detail_bssid;STRING;Wireless MAC address.
+info_detail_bundle_id;STRING;Bundle identifier, a string used to uniquely identify an app.
+info_detail_carrier;STRING;Mobile operators.
+info_detail_cell_ip;STRING;Local IP address.
+info_detail_charge_state;STRING;Device charge state, for example charging, unplugged, full.
+info_detail_country_iso;STRING;Country code.
+info_detail_current_time;NUMERIC;Current time in the format of Unix timestamp.
+info_detail_device_name;STRING;Device name.
+info_detail_dns_address;STRING;Domain name system address.
+info_detail_fp_version;STRING;Version of the fingerprinting SDK.
+info_detail_ip;STRING;IP address version 4.
+info_detail_ipv6;STRING;IP address version 6.
+info_detail_language;STRING;Language used in the device.
+info_detail_latitude;NUMERIC;North-South position, accurate to 6 decimal places.
+info_detail_longitude;NUMERIC;East-West position, accurate to 6 decimal places.
+info_detail_mcc;STRING;Mobile country code.
+info_detail_mnc;STRING;Mobile network code.
+info_detail_model;STRING;Device model.
+info_detail_network_type;STRING;Network type, for example 2g, 3g, 4g, 5g, wifi, mobile.
+info_detail_screen_brightness;NUMERIC;Screen brightness level.
+info_detail_screen_resolution;STRING;Screen resolution, in the format of width x height.
+info_detail_ssid;STRING;Wireless network name.
+info_detail_startup_time;STRING;Startup time of the device.
+info_detail_system_version;STRING;Either Android or iOS version.
+info_detail_time_zone;STRING;Time zone, for example UTC+0700.
+info_detail_time_zone_district;STRING;Time zone area, for example, Asia/Jakarta.
+info_detail_total_memory;NUMERIC;Total memory size in bytes.
+info_detail_total_storage;NUMERIC;Total storage size in bytes.
+info_detail_up_time;NUMERIC;Device uptime in seconds.
+info_detail_vpn_ip;STRING;VPN IP address.
+info_detail_wifi_ip;STRING;Wireless IP address.
+info_detail_android_id;STRING;Android identifier.
+info_detail_api_version;STRING;Android API version.
+info_detail_baseband_version;STRING;
+info_detail_brand;STRING;Device brand.
+info_detail_cpu_hardware;STRING;CPU hardware.
+info_detail_cpu_type;STRING;CPU type.
+info_detail_device_svn;STRING;Device software version number.
+info_detail_hardware;STRING;Hardware name.
+info_detail_host;STRING;Host.
+info_detail_product;STRING;Product code.
+info_detail_running_packages;STRING;Running application package name.
+info_detail_sign_md5;STRING;Sign MD5.
+info_detail_sim_operator;STRING;SIM card operator name.
+info_device_id;STRING;The unique ID of the device.
+info_device_os;STRING;Device type, for example Android, iOS, Web.
+is_info_device_risk_label_adb_link;BOOLEAN;Flag indicating the device has ADB link enabled in device risk label.
+is_info_device_risk_label_sys_multiple_running;BOOLEAN;Flag indicating the device has multiple system processes running abnormally.
+is_info_device_risk_label_device_info_tampered;BOOLEAN;Flag indicating device information has been tampered with.
+is_info_device_risk_label_null;BOOLEAN;Flag indicating device risk label information is null or missing.
+is_info_device_risk_label_vpn_detected;BOOLEAN;Flag indicating a VPN was detected on the device.
+is_info_device_risk_label_proxy_detected;BOOLEAN;Flag indicating a proxy was detected on the device.
+is_info_device_risk_label_suspected_reset;BOOLEAN;Flag indicating the device was recently reset (potentially to hide history).
+is_info_device_risk_label_abnormal_time;BOOLEAN;Flag indicating the device has abnormal time settings.
+is_info_device_risk_label_no_sim;BOOLEAN;Flag indicating the device has no SIM card installed.
+is_info_device_risk_label_gps_fake;BOOLEAN;Flag indicating the device is using fake GPS coordinates.
+is_info_device_risk_label_app_multiple_running;BOOLEAN;Flag indicating multiple suspicious apps running simultaneously.
+is_info_device_risk_label_hook_tool_detected;BOOLEAN;Flag indicating hook tools were detected on the device.
+is_info_device_risk_label_root;BOOLEAN;Flag indicating the device is rooted or jailbroken.
+is_info_tools_installed_risk_tools_type_quick_macro;BOOLEAN;Flag indicating quick macro tools are installed on the device.
+is_info_tools_installed_risk_tools_type_more_open;BOOLEAN;Flag indicating 'more open' risk tools are installed on the device.
+is_info_tools_installed_risk_tools_type_crowdsourcing_app;BOOLEAN;Flag indicating crowdsourcing apps are installed on the device.
+is_info_tools_installed_risk_tools_type_agent_app;BOOLEAN;Flag indicating agent apps are installed on the device.
+is_info_tools_installed_risk_tools_type_virtual_positioning;BOOLEAN;Flag indicating virtual positioning tools are installed on the device.
+is_info_tools_installed_risk_tools_type_machine_change_tools;BOOLEAN;Flag indicating machine change tools are installed on the device.
+is_info_tools_installed_risk_tools_type_null;BOOLEAN;Flag indicating installed risk tools type information is null or missing.
+is_info_tools_installed_risk_tools_type_virtual_app;BOOLEAN;Flag indicating virtual apps are installed on the device.
+is_info_tools_installed_risk_tools_type_capture_tool;BOOLEAN;Flag indicating screen capture tools are installed on the device.
+is_info_tools_running_risk_tools_type_null;BOOLEAN;Flag indicating running risk tools type information is null or missing.
+is_info_tools_running_risk_tools_type_quick_macro;BOOLEAN;Flag indicating quick macro tools are currently running on the device.
+is_info_tools_running_risk_tools_type_virtual_app;BOOLEAN;Flag indicating virtual apps are currently running on the device.
+info_ip_city;STRING;City name.
+info_ip_continent;STRING;Continent name.
+info_ip_country;STRING;Country name.
+info_ip_country_id;STRING;Country identifier.
+info_ip_region;STRING;Province/State/Region.
+created_at;TIMESTAMP;The timestamp when this object was created in source database (UTC).
+updated_at;TIMESTAMP;The system timestamp when the entity was updated.
+cdc_ts;TIMESTAMP;Timestamp that the event is being captured in oplog DB.
+source_ord;INTEGER;Ordinal of the event within the source timestamp, applicable for MongoDB source only.
+deleted;BOOLEAN;Flag indicating if the event is the deletion of the entity.
+null_document;BOOLEAN;Flag indicating if the event has empty full_document.
+event_id;STRING;Event id generated using DBT Surrogate Key on top of the key of the table.
+number_of_total_apps;INTEGER;Number of total applications installed on the device
+is_ios;BOOLEAN;Whether the device is iOS
+is_android;BOOLEAN;Whether the device is Android
+is_midnight_24_5;BOOLEAN;Whether the device is in the midnight 24-5
+is_morning_5_12;BOOLEAN;Whether the device is in the morning 5-12
+is_noon_12_17;BOOLEAN;Whether the device is in the noon 12-17
+is_evening_17_24;BOOLEAN;Whether the device is in the evening 17-24
+is_weekday;BOOLEAN;Whether the device is in the weekday
+is_weekend;BOOLEAN;Whether the device is in the weekend
+is_ip_null;BOOLEAN;Whether the device is in the ip null
+is_memory_available;BOOLEAN;Whether the device is in the memory available
+is_device_name_null;BOOLEAN;Whether the device is in the device name null
+is_dns_address_null;BOOLEAN;Whether the device is in the dns address null
+mcc_is_not_510;BOOLEAN;Whether the device is in the mcc is not 510
+language_used;STRING;Categorized Language Used by the device
+available_memory_in_megabytes;NUMERIC;Available memory in MB on the device
+is_network_no_cell_no_wifi;BOOLEAN;Whether the device is in the network no cell no wifi
+is_carrier_available;BOOLEAN;Whether the device is in the carrier available
+device_class;STRING;Device class based on the brand
+inserted_at;TIMESTAMP;The system timestamp when the row was inserted
+inserted_by;STRING;The identifier of the process, system or person who inserted the row to the table
+count_midnight_24_5_in_last_1d;INTEGER;Total application count of midnight 24-5 in last 1d for the same customer_id based on is_midnight_24_5 flag
+count_midnight_24_5_in_last_3d;INTEGER;Total application count of midnight 24-5 in last 3d for the same customer_id based on is_midnight_24_5 flag
+count_midnight_24_5_in_last_7d;INTEGER;Total application count of midnight 24-5 in last 7d for the same customer_id based on is_midnight_24_5 flag
+count_midnight_24_5_in_last_1M;INTEGER;Total application count of midnight 24-5 in last 1M for the same customer_id based on is_midnight_24_5 flag
+count_midnight_24_5_in_last_3M;INTEGER;Total application count of midnight 24-5 in last 3M for the same customer_id based on is_midnight_24_5 flag
+count_morning_5_12_in_last_1d;INTEGER;Total application count of morning 5-12 in last 1d for the same customer_id based on is_morning_5_12 flag
+count_morning_5_12_in_last_3d;INTEGER;Total application count of morning 5-12 in last 3d for the same customer_id based on is_morning_5_12 flag
+count_morning_5_12_in_last_7d;INTEGER;Total application count of morning 5-12 in last 7d for the same customer_id based on is_morning_5_12 flag
+count_morning_5_12_in_last_1M;INTEGER;Total application count of morning 5-12 in last 1M for the same customer_id based on is_morning_5_12 flag
+count_morning_5_12_in_last_3M;INTEGER;Total application count of morning 5-12 in last 3M for the same customer_id based on is_morning_5_12 flag
+count_noon_12_17_in_last_1d;INTEGER;Total application count of noon 12-17 in last 1d for the same customer_id based on is_noon_12_17 flag
+count_noon_12_17_in_last_3d;INTEGER;Total application count of noon 12-17 in last 3d for the same customer_id based on is_noon_12_17 flag
+count_noon_12_17_in_last_7d;INTEGER;Total application count of noon 12-17 in last 7d for the same customer_id based on is_noon_12_17 flag
+count_noon_12_17_in_last_1M;INTEGER;Total application count of noon 12-17 in last 1M for the same customer_id based on is_noon_12_17 flag
+count_noon_12_17_in_last_3M;INTEGER;Total application count of noon 12-17 in last 3M for the same customer_id based on is_noon_12_17 flag
+count_evening_17_24_in_last_1d;INTEGER;Total application count of evening 17-24 in last 1d for the same customer_id based on is_evening_17_24 flag
+count_evening_17_24_in_last_3d;INTEGER;Total application count of evening 17-24 in last 3d for the same customer_id based on is_evening_17_24 flag
+count_evening_17_24_in_last_7d;INTEGER;Total application count of evening 17-24 in last 7d for the same customer_id based on is_evening_17_24 flag
+count_evening_17_24_in_last_1M;INTEGER;Total application count of evening 17-24 in last 1M for the same customer_id based on is_evening_17_24 flag
+count_evening_17_24_in_last_3M;INTEGER;Total application count of evening 17-24 in last 3M for the same customer_id based on is_evening_17_24 flag
+count_weekday_in_last_1d;INTEGER;Total application count of weekday in last 1d for the same customer_id based on is_weekday flag
+count_weekday_in_last_3d;INTEGER;Total application count of weekday in last 3d for the same customer_id based on is_weekday flag
+count_weekday_in_last_7d;INTEGER;Total application count of weekday in last 7d for the same customer_id based on is_weekday flag
+count_weekday_in_last_1M;INTEGER;Total application count of weekday in last 1M for the same customer_id based on is_weekday flag
+count_weekday_in_last_3M;INTEGER;Total application count of weekday in last 3M for the same customer_id based on is_weekday flag
+count_weekend_in_last_1d;INTEGER;Total application count of weekend in last 1d for the same customer_id based on is_weekend flag
+count_weekend_in_last_3d;INTEGER;Total application count of weekend in last 3d for the same customer_id based on is_weekend flag
+count_weekend_in_last_7d;INTEGER;Total application count of weekend in last 7d for the same customer_id based on is_weekend flag
+count_weekend_in_last_1M;INTEGER;Total application count of weekend in last 1M for the same customer_id based on is_weekend flag
+count_weekend_in_last_3M;INTEGER;Total application count of weekend in last 3M for the same customer_id based on is_weekend flag
+count_distinct_ip_vpn_other_users_in_last_1d;INTEGER;Total application count of distinct ip vpn other users in last 1d for the same customer_id based on is_distinct_ip_vpn_other_users flag
+count_distinct_ip_vpn_other_users_in_last_3d;INTEGER;Total application count of distinct ip vpn other users in last 3d for the same customer_id based on is_distinct_ip_vpn_other_users flag
+count_distinct_ip_vpn_other_users_in_last_7d;INTEGER;Total application count of distinct ip vpn other users in last 7d for the same customer_id based on is_distinct_ip_vpn_other_users flag
+count_distinct_ip_vpn_other_users_in_last_1M;INTEGER;Total application count of distinct ip vpn other users in last 1M for the same customer_id based on is_distinct_ip_vpn_other_users flag
+count_distinct_ip_vpn_other_users_in_last_3M;INTEGER;Total application count of distinct ip vpn other users in last 3M for the same customer_id based on is_distinct_ip_vpn_other_users flag
+count_distinct_android_id_other_users_in_last_1d;INTEGER;Total application count of distinct android id other users in last 1d for the same customer_id based on is_distinct_android_id_other_users flag
+count_distinct_android_id_other_users_in_last_3d;INTEGER;Total application count of distinct android id other users in last 3d for the same customer_id based on is_distinct_android_id_other_users flag
+count_distinct_android_id_other_users_in_last_7d;INTEGER;Total application count of distinct android id other users in last 7d for the same customer_id based on is_distinct_android_id_other_users flag
+count_distinct_android_id_other_users_in_last_1M;INTEGER;Total application count of distinct android id other users in last 1M for the same customer_id based on is_distinct_android_id_other_users flag
+count_distinct_android_id_other_users_in_last_3M;INTEGER;Total application count of distinct android id other users in last 3M for the same customer_id based on is_distinct_android_id_other_users flag
+count_distinct_apply_location_other_in_last_1d;INTEGER;Total application count of distinct apply location other in last 1d for the same customer_id based on is_distinct_apply_location_other flag
+count_distinct_apply_location_other_in_last_3d;INTEGER;Total application count of distinct apply location other in last 3d for the same customer_id based on is_distinct_apply_location_other flag
+count_distinct_apply_location_other_in_last_7d;INTEGER;Total application count of distinct apply location other in last 7d for the same customer_id based on is_distinct_apply_location_other flag
+count_distinct_apply_location_other_in_last_1M;INTEGER;Total application count of distinct apply location other in last 1M for the same customer_id based on is_distinct_apply_location_other flag
+count_distinct_apply_location_other_in_last_3M;INTEGER;Total application count of distinct apply location other in last 3M for the same customer_id based on is_distinct_apply_location_other flag
+count_application_in_last_1d;INTEGER;Total application count of distinct apply location other in last 1d
+count_application_in_last_3d;INTEGER;Total application count of distinct apply location other in last 3d
+count_application_in_last_7d;INTEGER;Total application count of distinct apply location other in last 7d
+count_application_in_last_1M;INTEGER;Total application count of distinct apply location other in last 1M
+count_application_in_last_3M;INTEGER;Total application count of distinct apply location other in last 3M
+count_distinct_device_id_in_last_1d;INTEGER;Total count of distinct device id in last 1d per customer_id
+count_distinct_device_id_in_last_3d;INTEGER;Total count of distinct device id in last 3d per customer_id
+count_distinct_device_id_in_last_7d;INTEGER;Total count of distinct device id in last 7d per customer_id
+count_distinct_device_id_in_last_1M;INTEGER;Total count of distinct device id in last 1M per customer_id
+count_distinct_device_id_in_last_3M;INTEGER;Total count of distinct device id in last 3M per customer_id
+info_detail_ip_first_reused_at;TIMESTAMP;The first time attributes re-used by a customer. This value is picked from created_at of the device history information
+info_detail_vpn_ip_first_reused_at;TIMESTAMP;The first time attributes re-used by a customer. This value is picked from created_at of the device history information
+info_detail_android_id_first_reused_at;TIMESTAMP;The first time attributes re-used by a customer. This value is picked from created_at of the device history information
+number_of_manual_classification_installed_p2p_lending_application;INTEGER;Total number of installed P2P Lending related application installed in the device
+number_of_manual_classification_installed_gambling_application;INTEGER;Total number of installed Gambling related application installed in the device
+number_of_manual_classification_installed_digital_bank_application;INTEGER;Total number of installed Digital Bank related application installed in the device
+number_of_manual_classification_installed_bpr_bank_application;INTEGER;Total number of installed BPR Bank related application installed in the device
+cleaned_info_ip_city;STRING;Cleaned up data from info_ip_city from device
+cleaned_identity_address_city;STRING;Cleaned up data from identity address city
+cleaned_correspondence_address_city;STRING;Cleaned up data from correspondence address city
+cleaned_card_delivery_address_city;STRING;Cleaned up data from card delivery address city
+match_cleaned_identity_address_city;BOOLEAN;Flag if cleaned_info_ip_city is match with cleaned_identity_address_city
+match_cleaned_correspondence_address_city;BOOLEAN;Flag if cleaned_info_ip_city is match with cleaned_correspondence_address_city
+match_cleaned_card_delivery_address_city;BOOLEAN;Flag if cleaned_info_ip_city is match with cleaned_card_delivery_address_city

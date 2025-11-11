@@ -1,0 +1,113 @@
+view: tupr_dashboard_monthly_summary {
+sql_table_name: `data-prd-adhoc.credit_risk_adhoc.tupr_dashboard_monthly_summary` ;;
+
+dimension: offer_month {
+  type: string
+  sql: ${TABLE}.offer_month ;;
+  label: "Offer Month"
+}
+
+  dimension: source {
+    type: string
+    sql: ${TABLE}.source ;;
+    order_by_field: source_sorted
+  }
+
+  dimension: source_sorted {
+    type: string
+    sql: ${TABLE}.source_sorted ;;
+    hidden: yes
+  }
+
+  dimension: campaign_segment {
+    type: string
+    sql: ${TABLE}.campaign_segment ;;
+    order_by_field: campaign_segment_sorted
+    description: "Campaign segment: BAU, CT, Weekly, Open Market, Employee and Partner Payroll"
+  }
+
+  dimension: campaign_segment_sorted {
+    type: string
+    sql: ${TABLE}.campaign_segment_sorted ;;
+    hidden: yes
+    description: "Sorting field for campaign_segment (1.BAU, 2.CT, 3.Weekly, 4.Open Market, 5.Employee and Partner Payroll, 6.Unknown)"
+  }
+
+  measure: total_customers {
+    type: sum  # Changed from max
+    sql: ${TABLE}.total_customers ;;
+    value_format: "#,##0"
+  }
+
+  measure: total_limit {
+    type: sum  # Changed from max
+    sql: ${TABLE}.total_limit ;;
+    value_format: "#,##0"
+  }
+
+
+measure: total_limit_millions {
+  type: number
+  sql: ${total_limit} / 1000000 ;;
+  label: "Total Limit (M)"
+  value_format_name: decimal_2
+}
+
+  measure: customers_disbursed {
+    type: sum  # Changed from max
+    sql: ${TABLE}.customers_disbursed ;;
+    value_format: "#,##0"
+  }
+
+  measure: total_limit_disbursed {
+    type: sum  # Changed from max
+    sql: ${TABLE}.total_limit_disbursed ;;
+    value_format: "#,##0"
+  }
+
+measure: total_limit_disbursed_millions {
+  type: number
+  sql: ${total_limit_disbursed} / 1000000 ;;
+  label: "Total Limit Disbursed (M)"
+  value_format_name: decimal_2
+}
+
+measure: total_limit_not_disbursed {
+  type: number
+  sql: ${total_limit} - ${total_limit_disbursed} ;;
+  label: "Total Limit Not Disbursed"
+  value_format_name: decimal_0
+}
+
+measure: total_limit_not_disbursed_millions {
+  type: number
+  sql: ${total_limit_not_disbursed} / 1000000 ;;
+  label: "Total Limit Not Disbursed (M)"
+  value_format_name: decimal_2
+  }
+
+measure: customers_not_disbursed {
+  type: number
+  sql: ${total_customers} - ${customers_disbursed} ;;
+  label: "#Not Disbursed"
+  value_format_name: decimal_0
+}
+
+  measure: take_up_rate_pct_by_customer {
+    type: number  # Changed from max
+    sql: SAFE_DIVIDE(
+      SUM(${TABLE}.customers_disbursed) * 100.0,
+      NULLIF(SUM(${TABLE}.total_customers), 0)
+    ) ;;
+    value_format: "0.00\%"
+  }
+
+  measure: take_up_rate_pct_by_limit {
+    type: number  # Changed from max
+    sql: SAFE_DIVIDE(
+      SUM(${TABLE}.total_limit_disbursed) * 100.0,
+      NULLIF(SUM(${TABLE}.total_limit), 0)
+    ) ;;
+    value_format: "0.00\%"
+  }
+}

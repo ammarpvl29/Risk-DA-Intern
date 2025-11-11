@@ -1,0 +1,11 @@
+field name;type
+customer_id;STRING
+appid;STRING
+offer_date;DATE
+period;STRING
+split_tagging;STRING
+scores_bin;INTEGER
+calibrated_score_bin;STRING
+flag_takeup;INTEGER
+scores;FLOAT
+calibrated_score;INTEGER

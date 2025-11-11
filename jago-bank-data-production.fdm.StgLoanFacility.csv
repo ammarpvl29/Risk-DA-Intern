@@ -1,0 +1,50 @@
+field name;type;description
+BusinessDate;DATE;Business date when the record start to changed/added.
+LoanCategory;STRING;Category of loan inside this table, categorized into A,B,C,D,E
+AccountTypeFacility;STRING;Code of account facility type
+FacilityType;STRING;product code of facility
+FacilityRef;STRING;Reference code identifier for facility
+AccountType;STRING;The type of the loan account
+DealType;STRING;The code of the deal type
+NomorRekening;STRING;Account Number
+DealRef;STRING;Reference code identifier
+Branch;STRING;System unique identifier from the branch table
+CIF;STRING;Customer Identifier (CustomerId) that is being recorded from the source system
+AccountName;STRING;The customer name which owns the loan account
+Ccy;STRING;Account currency
+NomorPKAwal;STRING;Initial agreement number for the loan account
+TanggalPKAwal;DATE;Initial agreement date for the loan account
+NomorPKPerpanjangan;STRING;Renewal agreement number for the loan account
+TanggalPKPerpanjangan;DATE;Extended agreement date for the loan account
+FrekuensiPerpanjangan;INTEGER;Extended frequency
+TanggalMulaiPerpanjangan;DATE;To be confirmed
+TanggalAkhirPerpanjangan;DATE;To be confirmed
+StartDateFacility;DATE;Date when this facility was last approved or started
+MaturityDateFacility;DATE;Date when this facility was matured
+StartDate;DATE;Date when this account was last approved or started
+MaturityDate;DATE;Date when this account was matured
+JangkaWaktuMulai;DATE;To be confirmed
+JangkaWaktuJatuhWaktu;DATE;To be confirmed
+Collect;INTEGER;Customer collectibility status on customer level across multiple core banking systems
+PlafondAwal;BIGNUMERIC;The initial loan amount that is given to the customer
+Plafond;BIGNUMERIC;Current maximum loan amount that is given to the customer
+Outstanding;BIGNUMERIC;Outstanding balance amount of the loan account
+FairValue;BIGNUMERIC;Fair value amount
+UnusedFacility;BIGNUMERIC;Unused amount in level facility , a facility should not have an account to be disbursed, so the amount will stay.
+isUncommitted;STRING;
+DPDPrincipal;INTEGER;Specify how many days the account has been late for principal payments
+DPDInterest;INTEGER;Specify how many days the account has been late for interest payments
+DPDFinal;INTEGER;Specify how many days the account has been late for principal/interest payments
+TunggakanPokok;BIGNUMERIC;How much principal due for this loan account
+TunggakanBunga;BIGNUMERIC;How much interest due for this loan account
+InterestRate;BIGNUMERIC;The interest rate applied to the loan
+InterestAccrue;BIGNUMERIC;The total interest accrued by this loan account.
+NoD;INTEGER;Count number of Debtor
+CKPNType;STRING;Type of CKPN
+SifatKredit;STRING;Code for purpose of loan or facility
+ProductGroup;STRING;Product group description
+SourceSystem;STRING;Source system that the account is being recorded in.
+CollectAccount;INTEGER;Loan collectibility status on account level
+SingleCustomerIdentifier;STRING;Identifier that indicates a same customer across core system if it have same SingleCustomerIdentifier value.
+EIRRate;NUMERIC;Effective Interest Rate
+RealizationAmount;NUMERIC;Disbursement loan month to date

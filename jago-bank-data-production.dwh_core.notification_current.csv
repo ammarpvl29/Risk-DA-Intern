@@ -1,0 +1,28 @@
+field name;type;description
+notification_source;STRING;
+notification_id;STRING;
+base_event_id;STRING;
+notification_code;STRING;Notification code given from Mongo DB, created at the backend
+notification_category;STRING;Category of the notification
+notification_sub_category;STRING;Subcategory of the notification
+notification_status;STRING;Status of the notification
+notification_tab;STRING;TRANSACTION, OFFER, PENDING_ACTION, UPDATE
+customer_id;STRING;Target Customer Id
+payment_instruction_code;STRING;Payment instruction code, if the notification is transaction related
+header_en;STRING;Notification message header in english
+header_id;STRING;Notification message header in indonesian
+body_en;STRING;Notification message body in english
+body_id;STRING;Notification message body in indonesian
+footer_en;STRING;Notification message footer in english
+footer_id;STRING;Notification message footer in indonesian
+deep_link;STRING;Deep link embedded in the notification
+web_link;STRING;Link that redirects user to the Jago website embedded in the notification
+picture_url;STRING;Picture asset URL embedded in the notification
+external_id;STRING;
+notification_created_at;TIMESTAMP;Notification created time in Mongo DB. Timezone is UTC
+notification_updated_at;TIMESTAMP;Notification updated time in Mongo DB. Timezone is UTC
+notification_event_at;TIMESTAMP;Event timestamp of the original source
+notification_deleted;BOOLEAN;Flag indicating if the event is the deletion of the entity
+notification_inserted_at;TIMESTAMP;The system timestamp when the row was inserted
+notification_inserted_by;STRING;The identifier of the process, system or person who inserted the row to the table
+source_ord;INTEGER;Ordinal of the event within the source timestamp, applicable for MongoDB source only

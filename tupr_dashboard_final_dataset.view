@@ -1,0 +1,185 @@
+view: tupr_dashboard_final_dataset {
+  sql_table_name: `data-prd-adhoc.credit_risk_adhoc.tupr_dashboard_final_dataset` ;;
+
+  dimension: offer_month {
+    type: string
+    sql: ${TABLE}.offer_month ;;
+    description: "Month of loan offer in YYYY-MM format"
+  }
+
+  dimension: source {
+    type: string
+    sql: ${TABLE}.source ;;
+    order_by_field: source_sorted
+  }
+
+  dimension: source_sorted {
+    type: string
+    sql: ${TABLE}.source_sorted ;;
+    hidden: yes
+  }
+
+  dimension: campaign_segment {
+    type: string
+    sql: ${TABLE}.campaign_segment ;;
+    order_by_field: campaign_segment_sorted
+    description: "Campaign segment: BAU, CT, Weekly, Open Market, Employee and Partner Payroll"
+  }
+
+  dimension: campaign_segment_sorted {
+    type: string
+    sql: ${TABLE}.campaign_segment_sorted ;;
+    hidden: yes
+    description: "Sorting field for campaign_segment (1.BAU, 2.CT, 3.Weekly, 4.Open Market, 5.Employee and Partner Payroll, 6.Unknown)"
+  }
+
+  dimension: campaign_category {
+    type: string
+    sql: ${TABLE}.campaign_category ;;
+  }
+
+  dimension: product_code {
+    type: string
+    sql: ${TABLE}.product_code ;;
+    description: "Product type (JAG06, JAG08, JAG09)"
+    order_by_field: product_code_sorted
+  }
+
+  dimension: product_code_sorted {
+    hidden: yes
+    type: string
+    sql: ${TABLE}.product_code_sorted ;;
+  }
+
+  dimension: risk_bracket {
+    type: string
+    sql: ${TABLE}.risk_bracket ;;
+    description: "Risk grade of customer"
+    order_by_field: risk_bracket_sorted
+  }
+
+  dimension: risk_bracket_sorted {
+    hidden: yes
+    type: string
+    sql: ${TABLE}.risk_bracket_sorted ;;
+  }
+
+  dimension: limit_tier {
+    type: string
+    sql: ${TABLE}.limit_tier ;;
+    description: "Loan limit tier"
+    order_by_field: limit_tier_sorted
+  }
+
+  dimension: limit_tier_sorted {
+    hidden: yes
+    type: string
+    sql: ${TABLE}.limit_tier_sorted ;;
+  }
+
+  measure: total_customers {
+    type: sum
+    sql: ${TABLE}.total_customers ;;
+    description: "Total number of customers offered"
+    value_format_name: decimal_0
+  }
+
+  measure: total_limit {
+    type: sum
+    sql: ${TABLE}.total_limit ;;
+    description: "Total limit offered"
+    value_format_name: decimal_0
+  }
+
+  measure: total_limit_millions {
+    type: number
+    sql: ${total_limit} / 1000000 ;;
+    description: "Total limit offered in millions"
+    value_format_name: decimal_2
+  }
+
+  measure: customers_disbursed {
+    type: sum
+    sql: ${TABLE}.customers_disbursed ;;
+    description: "Number of customers who took up the loan"
+    value_format_name: decimal_0
+  }
+
+  measure: total_limit_disbursed {
+    type: sum
+    sql: ${TABLE}.total_limit_disbursed ;;
+    description: "Total limit disbursed"
+    value_format_name: decimal_0
+  }
+
+  measure: total_limit_disbursed_millions {
+    type: number
+    sql: ${total_limit_disbursed} / 1000000 ;;
+    description: "Total limit disbursed in millions"
+    value_format_name: decimal_2
+  }
+
+  measure: take_up_rate_pct_by_customer {
+    type: average
+    sql: ${TABLE}.take_up_rate_pct_by_customer ;;
+    description: "Take-up rate by customer count (%)"
+    value_format_name: decimal_2
+  }
+
+  measure: take_up_rate_pct_by_limit {
+    type: average
+    sql: ${TABLE}.take_up_rate_pct_by_limit ;;
+    description: "Take-up rate by limit amount (%)"
+    value_format_name: decimal_2
+  }
+
+  measure: calculated_take_up_rate_by_customer {
+    type: number
+    sql: ${customers_disbursed} * 100.0 / NULLIF(${total_customers}, 0) ;;
+    description: "Calculated take-up rate by customer (%)"
+    value_format_name: decimal_2
+  }
+
+  measure: calculated_take_up_rate_by_limit {
+    type: number
+    sql: ${total_limit_disbursed} * 100.0 / NULLIF(${total_limit}, 0) ;;
+    description: "Calculated take-up rate by limit (%)"
+    value_format_name: decimal_2
+  }
+
+  measure: avg_limit_per_customer {
+    type: number
+    sql: ${total_limit} / NULLIF(${total_customers}, 0) ;;
+    description: "Average limit per customer"
+    value_format_name: decimal_0
+  }
+
+  measure: avg_disbursed_per_customer {
+    type: number
+    sql: ${total_limit_disbursed} / NULLIF(${customers_disbursed}, 0) ;;
+    description: "Average disbursed limit per customer"
+    value_format_name: decimal_0
+  }
+
+
+  measure: count {
+    type: count
+    drill_fields: [detail*]
+  }
+
+
+  set: detail {
+    fields: [
+      offer_month,
+      product_code,
+      risk_bracket,
+      limit_tier,
+      total_customers,
+      total_limit_millions,
+      customers_disbursed,
+      total_limit_disbursed_millions,
+      take_up_rate_pct_by_customer,
+      take_up_rate_pct_by_limit
+    ]
+  }
+}

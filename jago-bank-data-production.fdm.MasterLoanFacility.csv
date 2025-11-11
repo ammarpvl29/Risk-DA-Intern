@@ -1,0 +1,55 @@
+field name;type;description
+BusinessDate;DATE;Business date when the record start to changed/added.
+Status;STRING;The status of the facility
+Branch;STRING;System unique identifier from the branch table related to the facility
+AccountType;STRING;The account type for the facility
+CIF;STRING;Customer CIF associated with the facility from customer_table
+AccountName;STRING;The name of the customer who gets the loan facility
+AOCode;STRING;The Account Officer code (for Sales KPI)
+FacilityRef;STRING;Facility reference number
+FacilityType;STRING;Facility code
+NomorPKAwal;STRING;Initial agreement number for the facility. Agreement in facility could be different with agreement at loan account level
+TanggalPKAwal;DATE;Initial agreement date for the facility
+NomorPKPerpanjangan;STRING;Renewal agreement number for the facility
+TanggalPKPerpanjangan;DATE;Renewal agreement date for the facility
+FrekuensiPerpanjangan;INTEGER;Indicates the frequency of agreement renewal count for the facility
+Ccy;STRING;3-digit currency code
+PlafondAwal;NUMERIC;The initial amount of facility that is given to the customer
+FacilityAmount;BIGNUMERIC;The amount of facility that client can be exposed to
+UnusedFacilityAmount;BIGNUMERIC;Total unused amount for committed facility
+isUncommitted;STRING;Flag indicating whether the facility is uncommitted/committed
+LoanBranch;STRING;System unique identifier from the branch table used by the loan account related to the facility
+LoanAccountType;STRING;The account type used by the loan account related to the facility
+LoanCIF;STRING;The Customer CIF for the loan account related to the facility
+LoanSequence;STRING;The loan sequence number
+StartDate;DATE;Represents the starting date from which the facility becomes active
+MaturityDate;DATE;The date when the facility was closed/matured
+LastReviewDate;DATE;The date when the facility was last reviewed
+NextReviewDate;DATE;The date when the facility will be reviewed again
+FrequencyReview;STRING;The frequency of facility review
+isRevolving;STRING;Flag indicating if the loan is revolving: whether the customer has the ability to draw down, repay, and draw down again, and so on
+isTangible;STRING;Flag indicating whether this facility requires tangible assets
+isAsuransi;STRING;Flag indicating whether this facility is covered by insurance
+isCollateralRequired;STRING;Flag indicating whether this facility requires collateral
+isSindikasi;STRING;Flag indicating whether this facility is syndicated bank facility
+isChanelling;STRING;Flag indicating whether this facility is channeled or directly coming from the Bank
+isMultiCustomer;STRING;Flag indicating whether this facility can be utilized by multiple customers
+isMultiCcy;STRING;Flag indicating whether this facility can use by multiple currencies
+Description1;STRING;Additonal descriptions for the facility
+Description2;STRING;Additonal descriptions for the facility
+Description3;STRING;Additonal descriptions for the facility
+Description4;STRING;Additonal descriptions for the facility
+Description5;STRING;Additonal descriptions for the facility
+KategoriDebitur;STRING;Category of the Debtor based on Regulatory definition
+KategoriPortfolio;STRING;Category of Portfolio based on Regulatory definition
+JenisKredit;STRING;Loan Type based on Regulatory definition
+SifatKredit;STRING;Loan Characteristic based on Regulatory definition
+JenisPenggunaan;STRING;Loan Usage Type based on Regulatory definition
+OrientasiPenggunaan;STRING;Loan Usage Orientation based on Regulatory definition
+KategoriPengukuran;STRING;Category of Measurement Methods based on Regulatory definition
+SektorEkonomi;STRING;Economic Sector based on Regulatory definition
+LokasiProyek;STRING;Project Location
+GolonganKredit;STRING;Loan Category based on Regulatory definition
+KreditProgramPemerintah;STRING;Flag indicating whether this line of credit is part of Government Lending Program or not
+JenisSukuBunga;STRING;Loan Interest Type based on Regulatory definition
+NilaiProyek;NUMERIC;Project Amount

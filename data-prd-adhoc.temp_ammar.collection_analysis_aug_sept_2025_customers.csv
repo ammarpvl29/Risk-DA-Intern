@@ -1,0 +1,22 @@
+field name;type
+id_number;STRING
+lfs_customer_id;STRING
+facility_reference;STRING
+deal_reference;STRING
+facility_start_date;DATE
+day_maturity;INTEGER
+deal_type;STRING
+plafond;BIGNUMERIC
+partner_final;STRING
+flag_bibit;INTEGER
+cohort_month;STRING
+cohort_name;STRING
+business_date;DATE
+mob;INTEGER
+fpd_dpd3_mob1_act;INTEGER
+fpd_dpd3_mob1_bal;BIGNUMERIC
+flag_bad_customer;INTEGER
+flag_good_customer;INTEGER
+ews_calibrated_scores;FLOAT
+risk_group_hci;STRING
+score_TD;NUMERIC

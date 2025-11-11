@@ -1,0 +1,21 @@
+field name;mode;type
+date;NULLABLE;STRING
+utc;NULLABLE;STRING
+company_name;NULLABLE;STRING
+campaign_name;NULLABLE;STRING
+template_name;NULLABLE;STRING
+type;NULLABLE;STRING
+contact_name;NULLABLE;STRING
+contact_phone;NULLABLE;STRING
+status;NULLABLE;STRING
+sender;NULLABLE;STRING
+error;NULLABLE;STRING
+message;NULLABLE;STRING
+message_id;NULLABLE;STRING
+campaign_id;NULLABLE;STRING
+contact_id;NULLABLE;STRING
+company_id;NULLABLE;STRING
+header_image;NULLABLE;STRING
+header_video;NULLABLE;STRING
+header_document;NULLABLE;STRING
+business_date;NULLABLE;DATE

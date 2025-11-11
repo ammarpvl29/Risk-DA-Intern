@@ -1,0 +1,15 @@
+field name;type
+customer_id;STRING
+logic1;INTEGER
+logic2;INTEGER
+logic3;INTEGER
+account_partners;STRING
+partner_final;STRING
+min_business_date_partners;DATE
+linked_timestamp;DATE
+BIBIT_LINK;STRING
+MOB_FUNDING;INTEGER
+partner_name_FUNDING;STRING
+date_diff_linked_timestamp;INTEGER
+date_diff_business_date_partners;INTEGER
+Flag_Sources;STRING

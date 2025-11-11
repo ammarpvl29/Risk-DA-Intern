@@ -171,3 +171,14 @@ plafond_awal_facility;BIGNUMERIC;Plafond awal of the loan facility
 flag_new_repeat_v1;STRING;Flag loan is NEW or REPEAT per CIF (version 1). NEW if the loan start_date_adj is in 30 days from earliest start_date_adj
 flag_new_repeat_v2;STRING;Flag loan is NEW or REPEAT per CIF (version 2). NEW if the loan having earliest start_date
 id_number;STRING;Customer identification number
+amount_to_paid_principal;FLOAT;The principal amount to paid of the loan installment
+amount_to_paid_interest;FLOAT;The interest amount to paid of the loan installment
+total_amount_to_paid;FLOAT;The total amount to paid of the loan installment
+paid_date;DATE;The paid date of the loan installment
+amount_paid_principal;FLOAT;The principal amount paid of the loan installment
+amount_paid_interest;FLOAT;The interest amount paid of the loan installment
+total_amount_paid;FLOAT;The total amount paid of the loan installment
+write_off_flag;INTEGER;Flag the loan is written off
+write_off_amount;BIGNUMERIC;Initial amount of write off loan
+flag_new_repeat_v3;STRING;Flag loan is NEW or REPEAT per CIF (version 3). NEW if the loan start date and facility start date in same month
+write_off_amount_monthly;BIGNUMERIC;Amount of write off loan in monthly basis

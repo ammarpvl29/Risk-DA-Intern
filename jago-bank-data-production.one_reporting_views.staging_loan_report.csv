@@ -1,0 +1,63 @@
+field name;mode;type;description
+business_date;NULLABLE;DATE;The date that represent the records state at the end of the day
+branch;NULLABLE;STRING;Branch
+account_type;NULLABLE;STRING;Account Type
+cif;NULLABLE;STRING;Customer Identifier
+sequence;NULLABLE;STRING;Sequence
+account;NULLABLE;STRING;Account number
+account_name;NULLABLE;STRING;Name of account holder
+deal_reference;NULLABLE;STRING;Deal reference
+deal_type;NULLABLE;STRING;Deal type
+nomor_pk_awal;NULLABLE;STRING;Initial Agreement Number
+nomor_pk_perpanjangan;NULLABLE;STRING;Extended Agreement Number
+tanggal_pk_awal;NULLABLE;DATE;Initial agreement date
+start_date;NULLABLE;DATE;Start date loan
+maturity_date;NULLABLE;DATE;Loan mature date
+tanggal_macet;NULLABLE;DATE;Lagged date
+frekuensi_tunggak;NULLABLE;INTEGER;pastdue frequency
+frekuensi_restruktur;NULLABLE;INTEGER;Restructure frequency
+tanggal_restruktur_awal;NULLABLE;DATE;Initial restructure date
+tanggal_restruktur_akhir;NULLABLE;DATE;end restructure date
+account_officer_code_customer;NULLABLE;STRING;account officer code customer
+account_officer_code;NULLABLE;STRING;account officer code
+currency;NULLABLE;STRING;The ISO code of money currency amount performed for related transaction, at the moment the default value is IDR
+interest_rate;NULLABLE;BIGNUMERIC;interest rate
+plafond_awal;NULLABLE;BIGNUMERIC;plafond initial
+plafond;NULLABLE;BIGNUMERIC;plafond
+outstanding;NULLABLE;BIGNUMERIC;outstanding amount
+unused_amount;NULLABLE;BIGNUMERIC;unused amount
+initial_fee;NULLABLE;BIGNUMERIC;initial fee amount
+amortized_fee;NULLABLE;BIGNUMERIC;amortized fee amount
+fair_value;NULLABLE;BIGNUMERIC;fair value
+interest_accrue;NULLABLE;BIGNUMERIC;interest accrue
+collect_account;NULLABLE;INTEGER;collect category per account per source
+collect;NULLABLE;INTEGER;collect category as per bankwide
+dpd_principal;NULLABLE;INTEGER;principal pastdue days
+dpd_interest;NULLABLE;INTEGER;interest pastdue days
+dpd_final;NULLABLE;INTEGER;greatest between principal and interest pastdue days
+pastdue_date_principal;NULLABLE;DATE;principal pastdue date
+pastdue_date_interest;NULLABLE;DATE;interest pastdue date
+tunggakan_pokok;NULLABLE;BIGNUMERIC;pastdue principal amount
+tunggakan_bunga;NULLABLE;BIGNUMERIC;pastdue interest amount
+tanggal_tunggakan_pokok;NULLABLE;DATE;date of principal pastdue
+tanggal_tunggakan_bunga;NULLABLE;DATE;date of interest pastdue
+denda_pokok;NULLABLE;BIGNUMERIC;amount of fine because of pastdue principal
+denda_bunga;NULLABLE;BIGNUMERIC;amount of fine because of pastdue interest
+ckpn_type;NULLABLE;STRING;sharia ckpn type
+source_system;NULLABLE;STRING;Name of source system, can be one of LP, WINCORE, or OLIBS724
+business_stream;NULLABLE;STRING;business stream
+deleted;NULLABLE;BOOLEAN;Flag indicating if the event is the deletion of the entity
+single_customer_identifier;NULLABLE;STRING;single customer identifier bankwide
+collect_cif;NULLABLE;INTEGER;collectability category per CIF per source
+nilai_ckpn;NULLABLE;BIGNUMERIC;ckpn amount
+realization_amount;NULLABLE;NUMERIC;amount of realization per month to date
+kategori_portfolio;NULLABLE;STRING;portfolio category
+kategori_portfolio_final;NULLABLE;STRING;final portfolio category
+next_principal_date;NULLABLE;DATE;next schedule date for principal payment
+next_interest_date;NULLABLE;DATE;next schedule date for interest payment
+next_principal_amount;NULLABLE;NUMERIC;next principal payment amount
+next_interest_amount;NULLABLE;NUMERIC;next interest payment amount
+jenis_kredit;NULLABLE;STRING;Loan Type based on Regulatory definition
+initial_cost;NULLABLE;BIGNUMERIC;initial cost amount
+origination_system;;STRING;Indicates the core banking platform used to process core banking operations. Example values include 'MAMBU', 'WINCORE' and 'OLIBS724'
+core_banking_system;;STRING;Indicates which system registered the data into the core banking platform. Example values include 'LP', 'WINCORE' and 'OLIBS724'
